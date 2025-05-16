@@ -1,0 +1,10 @@
+[2025-05-04 17:33:16] This is codeql database index-files --include-extension=.yaml --include-extension=.yml --size-limit=5m --language yaml -- C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\python-db
+[2025-05-04 17:33:16] Log file was started late.
+[2025-05-04 17:33:16] Using index-files script C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\codeql\yaml\tools\index-files.cmd.
+[2025-05-04 17:33:16] [PROGRESS] database index-files> Scanning for files in C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\test-code...
+[2025-05-04 17:33:16] Calling plumbing command: codeql resolve files --include-extension=.yaml --include-extension=.yml --size-limit=5m C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\test-code --format=json
+[2025-05-04 17:33:16] [PROGRESS] resolve files> Scanning C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\test-code...
+[2025-05-04 17:33:16] Plumbing command codeql resolve files completed:
+                      [ ]
+[2025-05-04 17:33:16] [DETAILS] database index-files> Found 0 files.
+[2025-05-04 17:33:17] Terminating normally.

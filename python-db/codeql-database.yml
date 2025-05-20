@@ -1,11 +1,11 @@
 ---
 sourceLocationPrefix: C:\Users\sever\OneDrive\Desktop\Language-based Security\Project
   GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\test-code
-baselineLinesOfCode: 15
+baselineLinesOfCode: 49
 unicodeNewlines: false
 columnKind: utf32
 primaryLanguage: python
 creationMetadata:
   cliVersion: 2.21.2
-  creationTime: 2025-05-20T09:43:32.554650800Z
+  creationTime: 2025-05-20T10:40:40.191904200Z
 finalised: true

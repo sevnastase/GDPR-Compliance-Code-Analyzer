@@ -58,6 +58,7 @@ predicate isCookie(Name n, string tag) {
   )
 }
 
+
 predicate sensitiveLeak(Name n, string tag) {
   isPrinted(n, tag) or
   isWritten(n, tag) or

@@ -58,12 +58,39 @@ predicate isCookie(Name n, string tag) {
   )
 }
 
+/**
+ * Detect logging.
+ */
+predicate isLogged(Name n, string tag) {
+  tag = "logged" and
+  exists(Call c, Attribute attr |
+    attr = c.getFunc() and
+    attr.getObject().(Name).getId() in ["logging", "logger"] and
+    attr.getName() in ["info", "error", "warning", "debug", "critical"] and
+    exists(int i | c.getArg(i) = n) and
+    isSensitiveName(n.getId())
+  )
+}
+
+/**
+ * Detect HTTP responses.
+ */
+predicate isReturnedHttp(Name n, string tag) {
+  tag = "returned-http" and
+  exists(Call c |
+    c.getFunc().(Name).getId() in ["Response", "make_response"] and
+    exists(int i | c.getArg(i) = n) and
+    isSensitiveName(n.getId())
+  )
+}
 
 predicate sensitiveLeak(Name n, string tag) {
   isPrinted(n, tag) or
   isWritten(n, tag) or
   isInserted(n, tag) or
-  isCookie(n, tag)
+  isCookie(n, tag) or
+  isLogged(n, tag) or
+  isReturnedHttp(n, tag)
 }
 
 //Dispatch

@@ -99,6 +99,23 @@ predicate isReturnedHttp(Name n, string tag) {
 }
 
 /**
+ * Detect if sensitive data is returned via jsonify (e.g. jsonify({"email": email})).
+ */
+predicate isReturnedInJson(Name n, string tag) {
+  tag = "json-returned" and
+  exists(Call c |
+    (
+      // Handle both: jsonify(...) and flask.jsonify(...)
+      c.getFunc().(Attribute).getName() = "jsonify" or
+      c.getFunc().(Name).getId() = "jsonify"
+    ) and
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    isSensitiveName(n.getId())
+  )
+}
+
+/**
  * Aggregating all predicates (to be used for dispatcher)
  */
 predicate sensitiveLeak(Name n, string tag) {
@@ -108,7 +125,8 @@ predicate sensitiveLeak(Name n, string tag) {
   isCookie(n, tag) or
   isLogged(n, tag) or
   isSentViaHttp(n, tag) or
-  isReturnedHttp(n, tag)
+  isReturnedHttp(n, tag) or
+  isReturnedInJson(n, tag)
 }
 
 //Dispatch

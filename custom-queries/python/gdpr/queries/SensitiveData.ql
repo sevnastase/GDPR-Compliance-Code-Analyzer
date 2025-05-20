@@ -40,9 +40,8 @@ predicate isWritten(Name n, string tag) {
 predicate isInserted(Name n, string tag) {
   tag = "inserted" and
   exists(Call c |
-    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
-    c.getLocation().getFile() = n.getLocation().getFile() and
-    c.toString().regexpMatch(".*insert.*") and
+    c.getFunc().(Attribute).getName() = "insert" and
+    exists(int i | c.getArg(i) = n) and
     isSensitiveName(n.getId())
   )
 }
@@ -53,9 +52,8 @@ predicate isInserted(Name n, string tag) {
 predicate isCookie(Name n, string tag) {
   tag = "cookie-responded" and
   exists(Call c |
-    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
-    c.getLocation().getFile() = n.getLocation().getFile() and
-    c.toString().regexpMatch(".*set_cookie.*") and
+    c.getFunc().(Attribute).getName() = "set_cookie" and
+    exists(int i | c.getArg(i) = n) and
     isSensitiveName(n.getId())
   )
 }

@@ -73,6 +73,20 @@ predicate isLogged(Name n, string tag) {
 }
 
 /**
+ * Detect sensitive data passed as part of a dictionary to requests.post(...)
+ */
+predicate isSentViaHttp(Name n, string tag) {
+  tag = "sent-http" and
+  exists(Call c |
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    c.getFunc().(Attribute).getName() = "post" and
+    isSensitiveName(n.getId())
+  )
+}
+
+
+/**
  * Detect HTTP responses.
  */
 predicate isReturnedHttp(Name n, string tag) {
@@ -84,12 +98,16 @@ predicate isReturnedHttp(Name n, string tag) {
   )
 }
 
+/**
+ * Aggregating all predicates (to be used for dispatcher)
+ */
 predicate sensitiveLeak(Name n, string tag) {
   isPrinted(n, tag) or
   isWritten(n, tag) or
   isInserted(n, tag) or
   isCookie(n, tag) or
   isLogged(n, tag) or
+  isSentViaHttp(n, tag) or
   isReturnedHttp(n, tag)
 }
 

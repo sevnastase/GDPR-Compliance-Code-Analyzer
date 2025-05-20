@@ -1,0 +1,55 @@
+[2025-05-20 11:21:33] This is codeql execute queries -J-Xmx1800M --off-heap-ram=1431 --verbosity=progress --logdir=C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\python-db\log --evaluator-log-level=5 --warnings=show --dynamic-join-order-mode=none --qlconfig-file=C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\qlconfig.yml -- C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\python-db\db-python path:C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\custom-queries\python\gdpr\queries\SensitiveData.ql
+[2025-05-20 11:21:33] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\qlconfig.yml --format=json -- path:C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\custom-queries\python\gdpr\queries\SensitiveData.ql
+[2025-05-20 11:21:34] [PROGRESS] resolve queries> Recording pack reference gdpr-analyzer at C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\custom-queries\python\gdpr.
+[2025-05-20 11:21:34] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\sever\\OneDrive\\Desktop\\Language-based Security\\Project GDPR Compliance\\gdpr-analyzer\\GDPR-Compliance-Code-Analyzer\\custom-queries\\python\\gdpr\\queries\\SensitiveData.ql"
+                      ]
+[2025-05-20 11:21:34] Refusing fancy output: The terminal is not an xterm: 
+[2025-05-20 11:21:34] Creating executor with 1 threads.
+[2025-05-20 11:21:34] Exception caught at top level: Failed to open file: C:\Users\sever\OneDrive\Desktop\Language-based Security\Project GDPR Compliance\gdpr-analyzer\GDPR-Compliance-Code-Analyzer\python-db\db-python\default\cache\cached-strings\pools\0\buckets\page-000000
+                      (eventual cause: IOException "The cloud operation was unsuccessful")
+                      com.semmle.inmemory.util.MMapResizingIntArray.readFromFolder(MMapResizingIntArray.java:330)
+                      com.semmle.inmemory.util.MMapResizingIntArray.readFrom(MMapResizingIntArray.java:81)
+                      com.semmle.inmemory.util.NonSequentialDiskPool.fromRoot(NonSequentialDiskPool.java:129)
+                      com.semmle.inmemory.stringpool.ExtensionalGeneration.readFromInfoFile(ExtensionalGeneration.java:332)
+                      com.semmle.inmemory.stringpool.StringPool.loadDirectories(StringPool.java:86)
+                      com.semmle.inmemory.populate.IMBStorage.loadIdsAndPool(IMBStorage.java:161)
+                      com.semmle.inmemory.MemoryBackend.<init>(MemoryBackend.java:135)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:99)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:66)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:467)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$5(SubcommandCommon.java:892)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:444)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:890)
+                      com.semmle.cli2.picocli.SubcommandCommon.toplevelMain(SubcommandCommon.java:777)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:757)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:238)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:259)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:115)
+                      
+                       ... caused by:
+                      
+                      java.io.IOException: The cloud operation was unsuccessful
+                      java.base/sun.nio.ch.FileDispatcherImpl.map0(Native Method)
+                      java.base/sun.nio.ch.FileDispatcherImpl.map(Unknown Source)
+                      java.base/sun.nio.ch.FileChannelImpl.mapInternal(Unknown Source)
+                      java.base/sun.nio.ch.FileChannelImpl.map(Unknown Source)
+                      com.semmle.inmemory.util.MMapResizingIntArray.readFromFolder(MMapResizingIntArray.java:326)
+                      com.semmle.inmemory.util.MMapResizingIntArray.readFrom(MMapResizingIntArray.java:81)
+                      com.semmle.inmemory.util.NonSequentialDiskPool.fromRoot(NonSequentialDiskPool.java:129)
+                      com.semmle.inmemory.stringpool.ExtensionalGeneration.readFromInfoFile(ExtensionalGeneration.java:332)
+                      com.semmle.inmemory.stringpool.StringPool.loadDirectories(StringPool.java:86)
+                      com.semmle.inmemory.populate.IMBStorage.loadIdsAndPool(IMBStorage.java:161)
+                      com.semmle.inmemory.MemoryBackend.<init>(MemoryBackend.java:135)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:99)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:66)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:467)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$5(SubcommandCommon.java:892)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:444)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:890)
+                      com.semmle.cli2.picocli.SubcommandCommon.toplevelMain(SubcommandCommon.java:777)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:757)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:238)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:259)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:115)

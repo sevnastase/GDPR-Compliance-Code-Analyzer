@@ -124,7 +124,7 @@ predicate isUsedWithoutConsent(Name n, string tag) {
   exists(Call c |
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
-    c.toString().regexpMatch(".*(send|email|notify|send_email).*")
+    c.toString().regexpMatch(".*(send|notify|send_email).*")
   ) and
   not exists(Name c |
     c.getLocation().getFile() = n.getLocation().getFile() and
@@ -143,7 +143,13 @@ predicate isSensitiveInUrl(Name n, string tag) {
   exists(Name v |
     v.getLocation().getFile() = n.getLocation().getFile() and
     v.getLocation().getStartLine() = n.getLocation().getStartLine() and
-    v.toString().regexpMatch("(?i)url|link|http|https")  // case-insensitive
+    v.toString().regexpMatch("(?i)url|link|http|https")  // URL context
+  ) and
+  // No hashing, encryption, or processing function nearby
+  not exists(Name fn |
+    fn.getLocation().getFile() = n.getLocation().getFile() and
+    fn.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    fn.toString().regexpMatch("(?i)hash|encrypt|encode|digest|hash_email")
   )
 }
 

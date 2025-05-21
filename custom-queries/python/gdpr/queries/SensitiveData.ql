@@ -134,6 +134,20 @@ predicate isUsedWithoutConsent(Name n, string tag) {
 }
 
 /**
+ * Detect if we are passing a sensitive value by attributing
+ * or concatenating it to a URL.
+ */
+predicate isSensitiveInUrl(Name n, string tag) {
+  tag = "url-assigned" and
+  isSensitiveName(n.getId()) and
+  exists(Name v |
+    v.getLocation().getFile() = n.getLocation().getFile() and
+    v.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    v.toString().regexpMatch("(?i)url|link|http|https")  // case-insensitive
+  )
+}
+
+/**
  * Aggregating all predicates (to be used for dispatcher)
  */
 predicate sensitiveLeak(Name n, string tag) {
@@ -145,7 +159,8 @@ predicate sensitiveLeak(Name n, string tag) {
   isSentViaHttp(n, tag) or
   isReturnedHttp(n, tag) or
   isReturnedInJson(n, tag) or
-  isUsedWithoutConsent(n, tag)
+  isUsedWithoutConsent(n, tag) or
+  isSensitiveInUrl(n, tag)
 }
 
 //Dispatch

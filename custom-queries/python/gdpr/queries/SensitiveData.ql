@@ -154,6 +154,59 @@ predicate isSensitiveInUrl(Name n, string tag) {
 }
 
 /**
+ * Check if the sensitive name is passed as part of a query
+ */
+predicate isInSql(Name n, string tag) {
+  tag = "in-sql" and
+  isSensitiveName(n.getId()) and
+  exists(Name v |
+    v.getLocation().getFile() = n.getLocation().getFile() and
+    v.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    v.toString().regexpMatch("(?i)query|sql|sql_query")
+  )
+}
+
+/**
+ * Detect sensitive data included in exception messages.
+ */
+predicate isInException(Name n, string tag) {
+  tag = "in-exception" and
+  isSensitiveName(n.getId()) and
+  exists(Call c |
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    c.toString().regexpMatch(".*(Exception|Error).*") and
+    n.getLocation().getStartLine() = c.getLocation().getStartLine()
+  )
+}
+
+/**
+ * Detect sensitive variables being attributed to local/session storage.
+ */
+predicate isStoredLocally1(Name n, string tag) {
+  tag = "stored-locally" and
+  isSensitiveName(n.getId()) and
+  exists(Name v |
+    v.getLocation().getFile() = n.getLocation().getFile() and
+    v.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    v.toString().regexpMatch("(?i)sessionStorage/*|localStorage/*")
+  )
+}
+
+/**
+ * Detect sensitive variables being attributed to local/session storage.
+ */
+predicate isStoredLocally2(Name n, string tag) {
+  tag = "stored-locally" and
+  exists(Call c |
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.toString().regexpMatch(".*localStorage|sessionStorage.*") and
+    isSensitiveName(n.getId())
+  )
+}
+
+/**
  * Aggregating all predicates (to be used for dispatcher)
  */
 predicate sensitiveLeak(Name n, string tag) {
@@ -166,7 +219,11 @@ predicate sensitiveLeak(Name n, string tag) {
   isReturnedHttp(n, tag) or
   isReturnedInJson(n, tag) or
   isUsedWithoutConsent(n, tag) or
-  isSensitiveInUrl(n, tag)
+  isSensitiveInUrl(n, tag) or
+  isInSql(n, tag) or
+  isInException(n, tag) or
+  isStoredLocally1(n, tag) or
+  isStoredLocally2(n, tag)
 }
 
 //Dispatch

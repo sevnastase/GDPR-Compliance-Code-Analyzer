@@ -116,6 +116,24 @@ predicate isReturnedInJson(Name n, string tag) {
 }
 
 /**
+ * Detect risky sending of sensitive data.
+ */
+predicate isUsedWithoutConsent(Name n, string tag) {
+  tag = "no-consent" and
+  isSensitiveName(n.getId()) and
+  exists(Call c |
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    c.toString().regexpMatch(".*(send|email|notify|send_email).*")
+  ) and
+  not exists(Name c |
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.getLocation().getStartLine() < n.getLocation().getStartLine() and
+    c.toString().regexpMatch(".*consent.*")
+  )
+}
+
+/**
  * Aggregating all predicates (to be used for dispatcher)
  */
 predicate sensitiveLeak(Name n, string tag) {
@@ -126,7 +144,8 @@ predicate sensitiveLeak(Name n, string tag) {
   isLogged(n, tag) or
   isSentViaHttp(n, tag) or
   isReturnedHttp(n, tag) or
-  isReturnedInJson(n, tag)
+  isReturnedInJson(n, tag) or
+  isUsedWithoutConsent(n, tag)
 }
 
 //Dispatch

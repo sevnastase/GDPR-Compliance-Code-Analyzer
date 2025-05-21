@@ -3,10 +3,12 @@ import re
 
 # Regex patterns
 REVOCATION_PATTERN = re.compile(r"\bconsent\s*=\s*False\b")
+CONSENT_BLOCK_PATTERN = re.compile(r"^\s*if\s+consent\s*:")
 RISKY_USE_PATTERN = re.compile(r"\b(send|send_email|notify)\s*\(")
 WRITE_PATTERN = re.compile(r"\.write(?:lines)?\s*\(")
 CARD_PATTERN = re.compile(r'"\d{4}-\d{4}-\d{4}-\d{4}"')
 SSN_PATTERN = re.compile(r'"\d{3}-\d{2}-\d{4}"')
+URL_PATTERN = re.compile(r'"https?://[^"]*"\s*\+\s*(?!hash_\w+\()(\w+)')
 
 # Sensitive data variable names
 SENSITIVE_VARS = {"email", "ssn", "dob", "password"}
@@ -16,8 +18,10 @@ def analyze_file(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    revoked_line_nums = set()
     flagged_lines = []
+    revoked_line_nums = set()
+    inside_consent_block = False
+    indent_level = None
 
     # --- Consent Revocation Detection ---
     for i, line in enumerate(lines):
@@ -25,24 +29,51 @@ def analyze_file(filepath):
             revoked_line_nums.add(i)
 
     for i, line in enumerate(lines):
+        stripped = line.strip()
+
+        # Track consent block state by indentation
+        if CONSENT_BLOCK_PATTERN.match(line):
+            inside_consent_block = True
+            indent_level = len(line) - len(line.lstrip())
+            continue
+
+        # Exit consent block if indentation decreases
+        if inside_consent_block:
+            current_indent = len(line) - len(line.lstrip())
+            if current_indent <= indent_level and stripped != "":
+                inside_consent_block = False
+
+        # Skip risky ops inside consent block
+        if inside_consent_block:
+            continue
+
+        # Consent revoked? Flag risky usage
         if any(revoked <= i for revoked in revoked_line_nums):
             if RISKY_USE_PATTERN.search(line) and any(var in line for var in SENSITIVE_VARS):
-                flagged_lines.append((filepath, i + 1, "[Consent Revoked] " + line.strip()))
+                flagged_lines.append((filepath, i + 1, "[Consent Revoked] " + stripped))
 
-    # --- Card Number Detection ---
+    # --- Card Number Detection (skip if wrapped in hash or other function) ---
     for i, line in enumerate(lines):
         if CARD_PATTERN.search(line):
-            flagged_lines.append((filepath, i + 1, "[Card Pattern] " + line.strip()))
+            if not re.search(r'\w+\s*\(\s*"\d{4}-\d{4}-\d{4}-\d{4}"\s*\)', line):
+                flagged_lines.append((filepath, i + 1, "[Card Pattern] " + line.strip()))
 
-    # --- SSN Detection ---
+    # --- SSN Detection (skip if wrapped in hash or other function) ---
     for i, line in enumerate(lines):
         if SSN_PATTERN.search(line):
-            flagged_lines.append((filepath, i + 1, "[SSN Pattern] " + line.strip()))
+            if not re.search(r'\w+\s*\(\s*"\d{3}-\d{2}-\d{4}"\s*\)', line):
+                flagged_lines.append((filepath, i + 1, "[SSN Pattern] " + line.strip()))
 
     # --- Sensitive Write Detection ---
     for i, line in enumerate(lines):
         if WRITE_PATTERN.search(line) and any(var in line for var in SENSITIVE_VARS):
             flagged_lines.append((filepath, i + 1, "[Sensitive Write] " + line.strip()))
+
+    # --- Sensitive Data Embedded in URL Detection (not hashed) ---
+    for i, line in enumerate(lines):
+        match = URL_PATTERN.search(line)
+        if match and match.group(1) in SENSITIVE_VARS:
+            flagged_lines.append((filepath, i + 1, "[Sensitive URL Embedding] " + line.strip()))
 
     return flagged_lines
 

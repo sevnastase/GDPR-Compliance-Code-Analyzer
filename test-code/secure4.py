@@ -1,4 +1,4 @@
-def hash_email(ssn):
+def hash(ssn):
     return hash(ssn)
 
-secure_data = hash_email("123-45-6789")
+secure_data = hash("123-45-6789")

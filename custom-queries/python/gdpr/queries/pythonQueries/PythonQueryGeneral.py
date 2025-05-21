@@ -11,6 +11,10 @@ SSN_PATTERN = re.compile(r'"\d{3}-\d{2}-\d{4}"')
 URL_PATTERN = re.compile(r'"https?://[^"]*"\s*\+\s*(?!hash_\w+\()(\w+)')
 SQL_INJECTION_PATTERN = re.compile(r'\bSELECT\b.*\bFROM\b.*\+.*\b\w+\b', re.IGNORECASE)
 RAISE_SENSITIVE_PATTERN = re.compile(r'raise\s+\w+\s*\(.*\+\s*\w+\s*\)', re.IGNORECASE)
+LOCAL_STORAGE_PATTERN = re.compile(
+    r'\b(?:localStorage|sessionStorage)\s*(?:\.setItem\s*\(|\[\s*["\']\w+["\']\s*\]\s*=\s*)',
+    re.IGNORECASE
+)
 
 # Sensitive data variable names
 SENSITIVE_VARS = {"email", "ssn", "dob", "password"}
@@ -86,6 +90,12 @@ def analyze_file(filepath):
     for i, line in enumerate(lines):
         if RAISE_SENSITIVE_PATTERN.search(line):
             flagged_lines.append((filepath, i + 1, "[Sensitive in Exception] " + line.strip()))
+            
+    # --- Local Storage Usage Detection ---
+    for i, line in enumerate(lines):
+        if LOCAL_STORAGE_PATTERN.search(line) and any(var in line for var in SENSITIVE_VARS):
+            flagged_lines.append((filepath, i + 1, "[Local Storage Usage] " + line.strip()))
+
 
     return flagged_lines
 

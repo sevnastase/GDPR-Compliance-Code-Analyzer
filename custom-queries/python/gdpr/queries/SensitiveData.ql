@@ -207,6 +207,19 @@ predicate isStoredLocally2(Name n, string tag) {
 }
 
 /**
+ * Detect if sensitive data is returned via an HTTP redirect (e.g. return redirect()).
+ */
+predicate isReturnedInRedirect(Name n, string tag) {
+  tag = "redirect-returned" and
+  isSensitiveName(n.getId()) and
+  exists(Call c |
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    c.toString().regexpMatch(".*redirect.*")
+  )
+}
+
+/**
  * Aggregating all predicates (to be used for dispatcher)
  */
 predicate sensitiveLeak(Name n, string tag) {
@@ -223,7 +236,8 @@ predicate sensitiveLeak(Name n, string tag) {
   isInSql(n, tag) or
   isInException(n, tag) or
   isStoredLocally1(n, tag) or
-  isStoredLocally2(n, tag)
+  isStoredLocally2(n, tag) or
+  isReturnedInRedirect(n, tag)
 }
 
 //Dispatch

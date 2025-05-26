@@ -303,24 +303,24 @@ class TaintAnalyzer:
             if violations:
                 summary.append("\nGDPR Violations Found:")
                 for v in violations:
-                    summary.append(f"  ❌ Line {v['line']}: {v['type']}")
+                    summary.append(f"     Line {v['line']}: {v['type']}")
                     summary.append(f"     Details: {v['details']}")
                     summary.append(f"     Severity: {v['severity']}")
             else:
-                summary.append("\n✅ No GDPR violations detected")
+                summary.append("\n No GDPR violations detected")
             
             # Taint Flows
             flows = result.get('flows', [])
             if flows:
                 summary.append("\nTaint Flows Detected:")
                 for flow in flows:
-                    summary.append(f"  ⚠️ Line {flow['line']}: {flow['source']} -> {flow['sink']}")
+                    summary.append(f"  Line {flow['line']}: {flow['source']} -> {flow['sink']}")
             
             # Compliance Status
             status = result.get('compliance', {})
             summary.append("\nCompliance Status:")
             for key, value in status.items():
-                icon = "✅" if value else "❌"
+                icon = "Looks Good for" if value else "Not Compliant for"
                 summary.append(f"  {icon} {key.replace('_', ' ').title()}")
             
             summary.append("\n" + "-" * 50)

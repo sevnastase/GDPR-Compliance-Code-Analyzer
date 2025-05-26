@@ -1,0 +1,35 @@
+# CodeQL database files 
+python-db/ 
+**/python-db/ 
+database/ 
+ 
+# Analysis results and logs 
+results/ 
+*.sarif 
+*.csv 
+*.log 
+logs/ 
+ 
+# IDE specific 
+.vscode/ 
+.idea/ 
+*.iml 
+ 
+# Python specific 
+__pycache__/ 
+*.py[cod] 
+*$py.class 
+.pytest_cache/ 
+ 
+# Virtual environment 
+venv/ 
+env/ 
+.env 
+ 
+# Distribution / packaging 
+dist/ 
+build/ 
+*.egg-info/ 
+ 
+# CodeQL specific 
+.codeql/ 

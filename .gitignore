@@ -1,9 +1,12 @@
 # CodeQL database files 
-python-db/ 
-**/python-db/ 
-database/ 
+python-db/
+**/python-db/
+database/
 *.pack
 *.pack.d
+*.rel
+*.rel.meta
+*.zip
 
 # Analysis results and logs 
 results/ 

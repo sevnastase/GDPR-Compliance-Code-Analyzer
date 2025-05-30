@@ -1,0 +1,19 @@
+
+Taint Analysis Summary
+---------------------
+Files analyzed: 29
+Total taint flows found: 6
+
+Detailed Findings:
+
+File: insecure1.py
+  Line 2: email -> print
+
+File: insecure2.py
+  Line 3: email -> print
+
+File: insecure8.py
+  Line 13: email -> print
+  Line 14: password -> print
+  Line 33: email -> logging.info
+  Line 34: password -> logging.error

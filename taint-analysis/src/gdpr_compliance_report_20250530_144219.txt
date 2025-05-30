@@ -1,0 +1,554 @@
+GDPR Compliance Analysis Summary
+==============================
+
+
+File: insecure1.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure10.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure11.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 3: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure12.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure13.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure14.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 2: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure15.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure16.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure17.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure18.py
+-------------------
+
+GDPR Violations Found:
+     Line 3: unauthorized_data_transfer
+     Details: Transferring sensitive data without consent
+     Severity: critical
+     Line 3: unencrypted_transfer
+     Details: Transferring sensitive data without encryption
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure19.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure2.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure3.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure4.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 3: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 3: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure5.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 3: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 3: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure6.py
+------------------
+
+GDPR Violations Found:
+     Line 3: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure7.py
+------------------
+
+GDPR Violations Found:
+     Line 3: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 7: insecure_flask_usage
+     Details: Using flask without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure8.py
+------------------
+
+GDPR Violations Found:
+     Line 7: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 7: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 8: unprotected_storage
+     Details: Storing sensitive data in variable password without protection
+     Severity: high
+     Line 8: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 30: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 30: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 18: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 18: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure9.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure.py
+---------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure10.py
+-----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure2.py
+----------------
+
+GDPR Violations Found:
+     Line 3: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 6: unauthorized_data_transfer
+     Details: Transferring sensitive data without consent
+     Severity: critical
+     Line 6: unencrypted_transfer
+     Details: Transferring sensitive data without encryption
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure3.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure4.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter ssn contains sensitive data without protection
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure5.py
+----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure6.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure7.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 4: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure8.py
+----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure9.py
+----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------

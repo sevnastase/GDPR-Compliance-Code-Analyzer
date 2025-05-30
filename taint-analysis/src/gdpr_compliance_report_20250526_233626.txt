@@ -1,0 +1,167 @@
+GDPR Compliance Analysis Summary
+==============================
+
+
+File: insecure1.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure10.py
+-------------------
+
+GDPR Violations Found:
+  ❌ Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+  ❌ Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure11.py
+-------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure12.py
+-------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure13.py
+-------------------
+
+GDPR Violations Found:
+  ❌ Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+  ❌ Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure14.py
+-------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure15.py
+-------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure16.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure17.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure18.py
+-------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure19.py
+-------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure2.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure3.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure4.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure5.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure6.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure7.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: insecure8.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: insecure9.py
+------------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: secure.py
+---------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: secure10.py
+-----------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: secure2.py
+----------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: secure3.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: secure4.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: secure5.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: secure6.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: secure7.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'check_function_node'
+
+File: secure8.py
+----------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined
+
+File: secure9.py
+----------------
+Error: name 'GDPR_DB_OPERATIONS' is not defined

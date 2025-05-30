@@ -1,0 +1,380 @@
+GDPR Compliance Analysis Summary
+==============================
+
+
+File: insecure1.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure10.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure11.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure12.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure13.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure14.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure15.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure16.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure17.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure18.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure19.py
+-------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure2.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure3.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure4.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure5.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure6.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure7.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure8.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: insecure9.py
+------------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure.py
+---------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure10.py
+-----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure2.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure3.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure4.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure5.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure6.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure7.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure8.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------
+
+File: secure9.py
+----------------
+
+✅ No GDPR violations detected
+
+Compliance Status:
+  ❌ Has Consent
+  ❌ Has Encryption
+  ❌ Has Retention
+  ✅ Has Minimization
+
+--------------------------------------------------

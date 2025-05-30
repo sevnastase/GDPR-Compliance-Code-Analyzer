@@ -4,7 +4,13 @@ import os
 import glob
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from config.gdpr_rules import GDPR_SENSITIVE_DATA, GDPR_REQUIREMENTS, GDPR_DB_OPERATIONS
+from config.gdpr_rules import (
+    GDPR_SENSITIVE_DATA, 
+    GDPR_REQUIREMENTS, 
+    GDPR_DB_OPERATIONS,
+    DATA_TRANSFER_PATTERNS,
+    COMMON_FRAMEWORKS
+)
 
 class GDPRCompliance:
     def __init__(self):
@@ -86,6 +92,12 @@ class TaintAnalyzer:
         if self.is_db_operation(node):
             self.check_db_operation(node)
 
+        # Check data transfer operations
+        self.check_data_transfer(node, filename)
+
+        # Check framework-specific compliance
+        self.check_framework_specific(node)
+
     def check_assignment_node(self, node: ast.Assign, filename: str):
         """Check assignment nodes for GDPR violations"""
         for target in node.targets:
@@ -93,23 +105,24 @@ class TaintAnalyzer:
                 if self.is_sensitive_source(node.value):
                     self.tainted_variables.add(target.id)
                     
-                    # Check for sensitive data protection
+                    # Only mark as non-compliant if there's no protection
                     if not self.has_encryption(node):
+                        self.gdpr.compliance_status['has_encryption'] = False
                         self.gdpr.add_violation(
                             'unprotected_storage',
                             f'Storing sensitive data in variable {target.id} without protection',
                             node.lineno,
                             'high'
                         )
-                    
-                    # Check for retention policy
-                    if not self.has_retention_policy(node):
-                        self.gdpr.add_violation(
-                            'missing_retention',
-                            f'No retention policy for sensitive data in {target.id}',
-                            node.lineno,
-                            'medium'
-                        )
+                
+                if not self.has_retention_policy(node):
+                    self.gdpr.compliance_status['has_retention'] = False
+                    self.gdpr.add_violation(
+                        'missing_retention',
+                        f'No retention policy for sensitive data in {target.id}',
+                        node.lineno,
+                        'medium'
+                    )
     def is_db_operation(self, node: ast.Call) -> bool:
         """Check if the call is a database operation"""
         call_name = self.get_call_name(node)
@@ -271,10 +284,19 @@ class TaintAnalyzer:
                 tree = ast.parse(file.read())
                 filename = os.path.basename(filepath)
                 
-                # Set parent references for consent checking
+                # Reset compliance status for each file
+                self.gdpr.compliance_status = {
+                    'has_consent': True,  # Start with compliant and mark as False if violations found
+                    'has_encryption': True,
+                    'has_retention': True,
+                    'has_minimization': True
+                }
+                
+                # Check imports for security features
+                self.check_security_imports(tree)
+                
+                # Analyze nodes
                 for node in ast.walk(tree):
-                    for child in ast.iter_child_nodes(node):
-                        setattr(child, 'parent', node)
                     self.analyze_node(node, filename)
                 
                 return {
@@ -285,6 +307,20 @@ class TaintAnalyzer:
                 }
         except Exception as e:
             return {'filepath': filepath, 'error': str(e)}
+
+    def check_security_imports(self, tree: ast.AST):
+        """Check for security-related imports"""
+        security_modules = {
+            'cryptography', 'ssl', 'hashlib', 'secrets',
+            'django.middleware.security', 'flask_security',
+            'sqlalchemy.crypto', 'werkzeug.security'
+        }
+        
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.Import, ast.ImportFrom)):
+                module_name = node.names[0].name.split('.')[0]
+                if module_name in security_modules:
+                    self.gdpr.compliance_status['has_encryption'] = True
 
     def get_summary(self) -> str:
         """Generate a detailed compliance report"""
@@ -404,7 +440,88 @@ class TaintAnalyzer:
         return any(
             isinstance(d, ast.Name) and d.id in protection_decorators
             for d in node.decorator_list
-        )   
+        )
+
+    def check_data_transfer(self, node: ast.Call, filename: str):
+        """Check data transfer operations for GDPR compliance"""
+        call_name = self.get_call_name(node)
+        if any(pattern in call_name for pattern in DATA_TRANSFER_PATTERNS):
+            if self.contains_sensitive_data(node):
+                if not self.has_consent(node):
+                    self.gdpr.add_violation(
+                        'unauthorized_data_transfer',
+                        'Transferring sensitive data without consent',
+                        node.lineno,
+                        'critical'
+                    )
+                if not self.has_encryption(node):
+                    self.gdpr.add_violation(
+                        'unencrypted_transfer',
+                        'Transferring sensitive data without encryption',
+                        node.lineno,
+                        'critical'
+                    )
+
+    def check_framework_specific(self, node: ast.Call):
+        """Check framework-specific GDPR compliance"""
+        call_name = self.get_call_name(node)
+        for framework, patterns in COMMON_FRAMEWORKS.items():
+            if any(pattern in call_name for pattern in patterns):
+                if not self.has_security_middleware(node):
+                    self.gdpr.add_violation(
+                        f'insecure_{framework}_usage',
+                        f'Using {framework} without proper security middleware',
+                        node.lineno,
+                        'high'
+                    )
+
+    def has_security_middleware(self, node: ast.Call) -> bool:
+        """Check if proper security middleware is in place"""
+        # Look for security middleware in imports and configurations
+        root = node
+        while hasattr(root, 'parent'):
+            root = getattr(root, 'parent')
         
+        for n in ast.walk(root):
+            if isinstance(n, ast.Import) or isinstance(n, ast.ImportFrom):
+                for name in n.names:
+                    if any(pattern in name.name for pattern in [
+                        'csrf', 'security', 'protection', 'middleware',
+                        'encryption', 'ssl', 'tls'
+                    ]):
+                        return True
+        return False
+
+    def check_user_rights_implementation(self, node: ast.FunctionDef):
+        """Check if user rights (access, deletion, etc.) are properly implemented"""
+        required_rights = GDPR_REQUIREMENTS['user_rights']['required_functions']
+        if any(right in node.name for right in required_rights):
+            # Check if proper security measures are in place
+            if not self.has_authentication(node):
+                self.gdpr.add_violation(
+                    'unprotected_user_rights',
+                    f'User rights function {node.name} lacks proper authentication',
+                    node.lineno,
+                    'high'
+                )
+
+    def has_authentication(self, node: ast.AST) -> bool:
+        """Check if proper authentication is implemented"""
+        auth_patterns = {
+            'authenticate', 'login_required', 'auth', 'jwt', 
+            'token', 'session', 'permission'
+        }
         
-        
+        # Check decorators
+        if isinstance(node, ast.FunctionDef):
+            for decorator in node.decorator_list:
+                if isinstance(decorator, ast.Name):
+                    if decorator.id in auth_patterns:
+                        return True
+                elif isinstance(decorator, ast.Call):
+                    if isinstance(decorator.func, ast.Name):
+                        if decorator.func.id in auth_patterns:
+                            return True
+        return False
+
+

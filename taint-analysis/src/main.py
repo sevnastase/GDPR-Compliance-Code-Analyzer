@@ -1,46 +1,36 @@
+import os
+import sys
+from datetime import datetime
 from analyzers.taint_analysis import TaintAnalyzer
-import logging
 
 def main():
-    # Configure basic logging
-    logging.basicConfig(level=logging.INFO)
+    analyzer = TaintAnalyzer()
     
-    test_cases = [
-        # Test case 1: Direct sensitive data leak
-        """
-password = "secret123"
-print(password)
-logging.info(password)
-""",
-        # Test case 2: Data flow through variable
-        """
-email = "user@example.com"
-user_data = email
-print(user_data)
-""",
-        # Test case 3: Multiple sinks with credit card
-        """
-credit_card = "1234-5678-9012-3456"
-card_info = credit_card
-print(card_info)
-logging.info(card_info)
-"""
-    ]
-    
-    print("Running taint analysis...")
-    for i, test_code in enumerate(test_cases, 1):
-        analyzer = TaintAnalyzer()  # Reset analyzer for each test
-        print(f"\nTest Case {i}:")
-        print("-" * 40)
-        print(f"Code:\n{test_code}")
-        flows = analyzer.analyze_code(test_code)
-        if flows:
-            print(f"Detected taint flows:")
-            for source, sinks in flows.items():
-                print(f"  {source} -> {', '.join(sinks)}")
+    if len(sys.argv) > 1:
+        filepath = sys.argv[1]
+        if os.path.exists(filepath):
+            results = analyzer.analyze_file(filepath)
         else:
-            print("No taint flows detected")
-        print("-" * 40)
+            print(f"Error: File not found - {filepath}")
+            return
+    else:
+        test_dir = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+            'test-code'
+        )
+        results = analyzer.analyze_directory(test_dir)
+    
+    # Generate timestamp for report
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    report_file = f'gdpr_compliance_report_{timestamp}.txt'
+    
+    # Print and save results with UTF-8 encoding
+    summary = analyzer.get_summary()
+    print(summary)
+    
+    with open(report_file, 'w', encoding='utf-8') as f:
+        f.write(summary)
+    print(f"\nDetailed report saved to: {report_file}")
 
 if __name__ == "__main__":
     main()

@@ -2,6 +2,10 @@ import os
 import re
 
 # Regex patterns
+PRINT_PATTERN = re.compile(r'\bprint\s*\(')
+SEND_PATTERN = re.compile(r'\bsend\s*\(')
+REDIRECT_PATTERN = re.compile(r'\bredirect\s*\(')
+COOKIE_PATTERN = re.compile(r'\bset_cookie\s*\(')
 REVOCATION_PATTERN = re.compile(r"\bconsent\s*=\s*False\b")
 CONSENT_BLOCK_PATTERN = re.compile(r"^\s*if\s+consent\s*:")
 RISKY_USE_PATTERN = re.compile(r"\b(send|send_email|notify)\s*\(")
@@ -96,6 +100,29 @@ def analyze_file(filepath):
         if LOCAL_STORAGE_PATTERN.search(line) and any(var in line for var in SENSITIVE_VARS):
             flagged_lines.append((filepath, i + 1, "[Local Storage Usage] " + line.strip()))
 
+    # --- Sensitive Variable Printed Detection ---
+    for i, line in enumerate(lines):
+        if PRINT_PATTERN.search(line):
+            if any(var in line for var in SENSITIVE_VARS):
+                flagged_lines.append((filepath, i + 1, "[Sensitive Print] " + line.strip()))
+
+    # --- Sensitive Variable Sending Detection ---
+    for i, line in enumerate(lines):
+        if SEND_PATTERN.search(line):
+            if any(var in line for var in SENSITIVE_VARS):
+                flagged_lines.append((filepath, i + 1, "[Sensitive Sending] " + line.strip()))
+
+    # --- Leak Via Redirect Detection ---
+    for i, line in enumerate(lines):
+        if REDIRECT_PATTERN.search(line):
+            if any(var in line for var in SENSITIVE_VARS):
+                flagged_lines.append((filepath, i + 1, "[Sensitive Redirect] " + line.strip()))
+
+    # --- Leak Via Cookie Detection ---
+    for i, line in enumerate(lines):
+        if COOKIE_PATTERN.search(line):
+            if any(var in line for var in SENSITIVE_VARS):
+                flagged_lines.append((filepath, i + 1, "[Sensitive Cookie Setting] " + line.strip()))
 
     return flagged_lines
 

@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+
+import boto3
+import json
+from munch import *
+import os
+import sys
+import tarfile
+from zipfile import ZipFile
+import requests
+from pathlib import Path
+
+logs = sys.argv[1:]
+if len(logs) == 0:
+  print('please provide one or more log IDs')
+  sys.exit(1)
+
+print(logs)
+if len(logs) == 1 and logs[0].startswith('https://github.com/user-attachments/'):
+  print('debug-log mode')
+  url = logs[0]
+  log = url.split('/')[-1]
+  dir = Path(log).stem
+  log = f'logs/{dir}/{log}'
+  print(url, log)
+  r = requests.get(url, allow_redirects=True)
+  os.makedirs(f'logs/{dir}', exist_ok=True)
+  with open(log, 'wb') as f:
+    f.write(r.content)
+  if log.endswith('.zip'):
+    with ZipFile(log) as f:
+      f.extractall(path=f'logs/{dir}')
+    os.remove(log)
+  sys.exit(0)
+
+logs = [log.split('/')[0] for log in logs]
+
+if len(logs) == 1 and '-0x0-' in logs[0]:
+  print('0x0 mode')
+  local, fio, remote = logs[0].split('-')
+  url = 'https://0x0.st/' + remote + '.zip'
+  log = 'logs/' + local + '.zip'
+  r = requests.get(url, allow_redirects=True)
+  with open(log, 'wb') as f:
+    f.write(r.content)
+  with ZipFile(log) as f:
+    for name in f.namelist():
+      if not '/' in name:
+        raise ValueError(name)
+      print(name)
+    f.extractall(path='logs')
+  os.remove(log)
+  print(log)
+  sys.exit(0)
+
+postfixes = set([])
+for log in logs:
+  if '-' in log:
+    postfixes.add(log.split('-')[-1])
+
+s3 = boto3.resource('s3')
+
+with open('package.json') as f:
+  package = json.load(f, object_hook=Munch)
+with open('content/s3.json') as f:
+  regions = json.load(f, object_hook=Munch)
+
+prefix = regions.bucket
+print(prefix)
+for region, details in regions.region.items():
+  if len(postfixes) > 0 and details.short not in postfixes: continue
+  print(region, details)
+  merge = {}
+
+  bucket = s3.Bucket(name=f'{prefix}-{details.short}')
+  for obj in bucket.objects.all():
+    target = os.path.basename(obj.key)
+
+    try:
+      parts = os.path.basename(obj.key).split('.')
+      if parts[2] in ['json', 'txt'] and int(parts[1]): target = f'{parts[0]}.{parts[2]}'
+    except IndexError:
+      target = os.path.basename(obj.key)
+
+    if not target in merge: merge[target] = []
+    merge[target].append(obj)
+
+if not os.path.exists('logs'): os.makedirs('logs')
+for target, partials in merge.items():
+  log = os.path.join('logs', target)
+  if len([log for log in logs if log in target]) == 0: continue
+  if os.path.exists(log):
+    print(f'skipping {target}')
+    continue
+
+  print(f'saving {target}')
+  with open(log, 'wb') as f:
+    for i, partial in enumerate(sorted(partials, key=lambda p: p.key)):
+      if len(partials) != 1: print(f'  {i+1}/{len(partials)}')
+      f.write(partial.get()['Body'].read())
+  if log.endswith('.tar') or log.endswith('.tar.gz') or log.endswith('.tgz') :
+    tar = tarfile.open(log)
+    tar.extractall('logs')
+    tar.close()
+    os.remove(log)
+  elif log.endswith('.zip'):
+    with ZipFile(log) as f:
+      for name in f.namelist():
+        if not '/' in name:
+          raise ValueError(name)
+        print(name)
+      f.extractall(path='logs')
+    os.remove(log)

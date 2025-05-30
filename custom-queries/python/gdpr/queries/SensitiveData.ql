@@ -4,7 +4,7 @@ import python
  * Define sensitive variable names.
  */
 predicate isSensitiveName(string id) {
-  id = "email" or id = "password" or id = "ssn" or id = "dob"
+  id = "email" or id = "password" or id = "ssn" or id = "dob" or id = "name" or id = "token"
 }
 
 /**
@@ -16,7 +16,10 @@ predicate isPrinted(Name n, string tag) {
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.toString().regexpMatch(".*print.*") and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -29,7 +32,10 @@ predicate isWritten(Name n, string tag) {
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.toString().regexpMatch(".*open.*") and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -40,9 +46,12 @@ predicate isWritten(Name n, string tag) {
 predicate isInserted(Name n, string tag) {
   tag = "inserted" and
   exists(Call c |
-    c.getFunc().(Attribute).getName() = "insert" and
+    c.getFunc().(Attribute).getName().regexpMatch(".*insert.*") and
     exists(int i | c.getArg(i) = n) and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -54,7 +63,10 @@ predicate isCookie(Name n, string tag) {
   exists(Call c |
     c.getFunc().(Attribute).getName() = "set_cookie" and
     exists(int i | c.getArg(i) = n) and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -65,10 +77,29 @@ predicate isLogged(Name n, string tag) {
   tag = "logged" and
   exists(Call c, Attribute attr |
     attr = c.getFunc() and
-    attr.getObject().(Name).getId() in ["logging", "logger"] and
+    attr.getObject().(Name).getId() in ["logging", "logger", "log"] and
     attr.getName() in ["info", "error", "warning", "debug", "critical"] and
     exists(int i | c.getArg(i) = n) and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
+  )
+}
+
+/**
+ * Analogous to previous log
+ */
+predicate isLoggedDirectly(Name n, string tag) {
+  tag = "printed" and
+  exists(Call c |
+    c.getLocation().getStartLine() = n.getLocation().getStartLine() and
+    c.getLocation().getFile() = n.getLocation().getFile() and
+    c.toString().regexpMatch(".*log.*") and
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -81,7 +112,10 @@ predicate isSentViaHttp(Name n, string tag) {
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
     c.getFunc().(Attribute).getName() = "post" and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -94,7 +128,10 @@ predicate isReturnedHttp(Name n, string tag) {
   exists(Call c |
     c.getFunc().(Name).getId() in ["Response", "make_response"] and
     exists(int i | c.getArg(i) = n) and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -111,7 +148,10 @@ predicate isReturnedInJson(Name n, string tag) {
     ) and
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -120,7 +160,10 @@ predicate isReturnedInJson(Name n, string tag) {
  */
 predicate isUsedWithoutConsent(Name n, string tag) {
   tag = "no-consent" and
-  isSensitiveName(n.getId()) and
+  exists (string keyword |
+    isSensitiveName(keyword) and
+    n.getId().regexpMatch(".*" + keyword + ".*")
+  ) and
   exists(Call c |
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
@@ -139,7 +182,10 @@ predicate isUsedWithoutConsent(Name n, string tag) {
  */
 predicate isSensitiveInUrl(Name n, string tag) {
   tag = "url-assigned" and
-  isSensitiveName(n.getId()) and
+  exists (string keyword |
+    isSensitiveName(keyword) and
+    n.getId().regexpMatch(".*" + keyword + ".*")
+  ) and
   exists(Name v |
     v.getLocation().getFile() = n.getLocation().getFile() and
     v.getLocation().getStartLine() = n.getLocation().getStartLine() and
@@ -158,11 +204,14 @@ predicate isSensitiveInUrl(Name n, string tag) {
  */
 predicate isInSql(Name n, string tag) {
   tag = "in-sql" and
-  isSensitiveName(n.getId()) and
+  exists (string keyword |
+    isSensitiveName(keyword) and
+    n.getId().regexpMatch(".*" + keyword + ".*")
+  ) and
   exists(Name v |
     v.getLocation().getFile() = n.getLocation().getFile() and
     v.getLocation().getStartLine() = n.getLocation().getStartLine() and
-    v.toString().regexpMatch("(?i)query|sql|sql_query")
+    v.toString().regexpMatch(".*(?i)query.*|.*sql.*|.*sql_query.*")
   )
 }
 
@@ -171,7 +220,10 @@ predicate isInSql(Name n, string tag) {
  */
 predicate isInException(Name n, string tag) {
   tag = "in-exception" and
-  isSensitiveName(n.getId()) and
+  exists (string keyword |
+    isSensitiveName(keyword) and
+    n.getId().regexpMatch(".*" + keyword + ".*")
+  ) and
   exists(Call c |
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
@@ -185,7 +237,10 @@ predicate isInException(Name n, string tag) {
  */
 predicate isStoredLocally1(Name n, string tag) {
   tag = "stored-locally" and
-  isSensitiveName(n.getId()) and
+  exists (string keyword |
+    isSensitiveName(keyword) and
+    n.getId().regexpMatch(".*" + keyword + ".*")
+  ) and
   exists(Name v |
     v.getLocation().getFile() = n.getLocation().getFile() and
     v.getLocation().getStartLine() = n.getLocation().getStartLine() and
@@ -202,7 +257,10 @@ predicate isStoredLocally2(Name n, string tag) {
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.toString().regexpMatch(".*localStorage|sessionStorage.*") and
-    isSensitiveName(n.getId())
+    exists (string keyword |
+      isSensitiveName(keyword) and
+      n.getId().regexpMatch(".*" + keyword + ".*")
+    )
   )
 }
 
@@ -211,7 +269,10 @@ predicate isStoredLocally2(Name n, string tag) {
  */
 predicate isReturnedInRedirect(Name n, string tag) {
   tag = "redirect-returned" and
-  isSensitiveName(n.getId()) and
+  exists (string keyword |
+    isSensitiveName(keyword) and
+    n.getId().regexpMatch(".*" + keyword + ".*")
+  ) and
   exists(Call c |
     c.getLocation().getFile() = n.getLocation().getFile() and
     c.getLocation().getStartLine() = n.getLocation().getStartLine() and
@@ -228,6 +289,7 @@ predicate sensitiveLeak(Name n, string tag) {
   isInserted(n, tag) or
   isCookie(n, tag) or
   isLogged(n, tag) or
+  isLoggedDirectly(n, tag) or
   isSentViaHttp(n, tag) or
   isReturnedHttp(n, tag) or
   isReturnedInJson(n, tag) or

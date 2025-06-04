@@ -39,13 +39,15 @@ GDPR_SENSITIVE_DATA: Dict = {
 GDPR_REQUIREMENTS: Dict = {
     'consent': {
         'required_patterns': [
-            'consent', 'accept', 'agree', 'permission', 'authorize', 'opt_in',
-            'gdpr_consent', 'data_processing_agreement'
+            'consent', 'accept', 'agree', 'permission', 'authorize',
+            'opt_in', 'gdpr_consent', 'data_processing_agreement',
+            'user_consent', 'explicit_consent', 'consent_obtained'
         ],
         'functions': [
             'get_consent', 'check_consent', 'verify_consent', 'has_consent',
             'request_permission', 'validate_consent', 'is_authorized',
-            'opt_in_status', 'can_process_data', 'user_agreed'
+            'opt_in_status', 'can_process_data', 'user_agreed',
+            'obtain_consent', 'require_consent'
         ],
         'required_documentation': [
             'purpose_of_processing',
@@ -66,12 +68,14 @@ GDPR_REQUIREMENTS: Dict = {
     },
     'retention': {
         'required_patterns': [
-            'retention', 'delete_after', 'expire', 'ttl', 'auto_delete',
-            'data_lifetime', 'storage_period'
+            'retention', 'delete_after', 'expire', 'ttl', 'timeout',
+            'data_lifetime', 'storage_period', 'auto_delete', 'purge_after',
+            'retention_period', 'data_expiry', 'cleanup_after'
         ],
         'functions': [
             'set_retention', 'delete_expired', 'cleanup_data', 
-            'remove_old_data', 'auto_delete', 'schedule_deletion'
+            'remove_old_data', 'auto_delete', 'schedule_deletion',
+            'purge_data', 'expire_data', 'cleanup_expired'
         ]
     },
     'security': {

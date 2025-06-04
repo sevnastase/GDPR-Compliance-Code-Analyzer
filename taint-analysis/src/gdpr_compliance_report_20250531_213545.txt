@@ -1,0 +1,2689 @@
+GDPR Compliance Analysis Summary
+==============================
+
+
+File: github-test1.py
+---------------------
+
+GDPR Violations Found:
+     Line 6: missing_retention
+     Details: No retention policy for sensitive data in app
+     Severity: medium
+     Line 7: missing_retention
+     Details: No retention policy for sensitive data in login_manager
+     Severity: medium
+     Line 19: missing_retention
+     Details: No retention policy for sensitive data in users
+     Severity: medium
+     Line 24: missing_retention
+     Details: No retention policy for sensitive data in nested_dict
+     Severity: medium
+     Line 25: missing_retention
+     Details: No retention policy for sensitive data in user_check
+     Severity: medium
+     Line 13: unprotected_parameter
+     Details: Function parameter username contains sensitive data without protection
+     Severity: medium
+     Line 13: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 33: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 39: missing_retention
+     Details: No retention policy for sensitive data in username
+     Severity: medium
+     Line 40: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 39: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 39: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 40: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 40: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 42: missing_retention
+     Details: No retention policy for sensitive data in id
+     Severity: medium
+     Line 43: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure1.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure10.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: missing_retention
+     Details: No retention policy for sensitive data in url
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure11.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 3: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure12.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure13.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure14.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 2: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure15.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure16.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in cardnr
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure17.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure18.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in consent
+     Severity: medium
+     Line 2: missing_retention
+     Details: No retention policy for sensitive data in consent
+     Severity: medium
+     Line 3: unauthorized_data_transfer
+     Details: Transferring sensitive data without consent
+     Severity: critical
+     Line 3: unencrypted_transfer
+     Details: Transferring sensitive data without encryption
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure19.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure2.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: missing_retention
+     Details: No retention policy for sensitive data in dob
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure3.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure4.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 2: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+     Line 3: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 3: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure5.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 3: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 3: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure6.py
+------------------
+
+GDPR Violations Found:
+     Line 3: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure7.py
+------------------
+
+GDPR Violations Found:
+     Line 3: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+     Line 7: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 7: insecure_flask_usage
+     Details: Using flask without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure8.py
+------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: insecure9.py
+------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_failed1.py
+-----------------------
+Error: invalid syntax (<unknown>, line 3)
+
+File: online_failed2.py
+-----------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: online_failed3.py
+-----------------------
+
+GDPR Violations Found:
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in username
+     Severity: medium
+     Line 22: missing_retention
+     Details: No retention policy for sensitive data in f
+     Severity: medium
+     Line 26: missing_retention
+     Details: No retention policy for sensitive data in f
+     Severity: medium
+     Line 38: unprotected_storage
+     Details: Storing sensitive data in variable token without protection
+     Severity: high
+     Line 38: missing_retention
+     Details: No retention policy for sensitive data in token
+     Severity: medium
+     Line 39: missing_retention
+     Details: No retention policy for sensitive data in f
+     Severity: medium
+     Line 45: unprotected_storage
+     Details: Storing sensitive data in variable token without protection
+     Severity: high
+     Line 45: missing_retention
+     Details: No retention policy for sensitive data in token
+     Severity: medium
+     Line 46: missing_retention
+     Details: No retention policy for sensitive data in f
+     Severity: medium
+     Line 38: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 45: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_failed4.py
+-----------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: online_failed5.py
+-----------------------
+
+GDPR Violations Found:
+     Line 5: missing_retention
+     Details: No retention policy for sensitive data in d
+     Severity: medium
+     Line 29: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+     Line 33: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure1.py
+-------------------------
+
+GDPR Violations Found:
+     Line 1: unprotected_storage
+     Details: Storing sensitive data in variable email_1 without protection
+     Severity: high
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in email_1
+     Severity: medium
+     Line 2: unprotected_storage
+     Details: Storing sensitive data in variable email_2 without protection
+     Severity: high
+     Line 2: missing_retention
+     Details: No retention policy for sensitive data in email_2
+     Severity: medium
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email_3
+     Severity: medium
+     Line 4: unprotected_storage
+     Details: Storing sensitive data in variable email_4 without protection
+     Severity: high
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in email_4
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure10.py
+--------------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: online_insecure11.py
+--------------------------
+
+GDPR Violations Found:
+     Line 16: unprotected_parameter
+     Details: Function parameter images contains sensitive data without protection
+     Severity: medium
+     Line 38: missing_retention
+     Details: No retention policy for sensitive data in options
+     Severity: medium
+     Line 40: missing_retention
+     Details: No retention policy for sensitive data in dirpath
+     Severity: medium
+     Line 41: missing_retention
+     Details: No retention policy for sensitive data in browser
+     Severity: medium
+     Line 42: missing_retention
+     Details: No retention policy for sensitive data in url
+     Severity: medium
+     Line 43: missing_retention
+     Details: No retention policy for sensitive data in root
+     Severity: medium
+     Line 48: unprotected_storage
+     Details: Storing sensitive data in variable path without protection
+     Severity: high
+     Line 48: missing_retention
+     Details: No retention policy for sensitive data in path
+     Severity: medium
+     Line 51: unprotected_parameter
+     Details: Function parameter image contains sensitive data without protection
+     Severity: medium
+     Line 64: unprotected_parameter
+     Details: Function parameter images contains sensitive data without protection
+     Severity: medium
+     Line 95: missing_retention
+     Details: No retention policy for sensitive data in bot_users
+     Severity: medium
+     Line 17: missing_retention
+     Details: No retention policy for sensitive data in image
+     Severity: medium
+     Line 18: missing_retention
+     Details: No retention policy for sensitive data in text_box
+     Severity: medium
+     Line 19: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 21: missing_retention
+     Details: No retention policy for sensitive data in action
+     Severity: medium
+     Line 44: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 56: missing_retention
+     Details: No retention policy for sensitive data in file
+     Severity: medium
+     Line 65: missing_retention
+     Details: No retention policy for sensitive data in image
+     Severity: medium
+     Line 66: missing_retention
+     Details: No retention policy for sensitive data in text_box
+     Severity: medium
+     Line 67: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 69: missing_retention
+     Details: No retention policy for sensitive data in action
+     Severity: medium
+     Line 83: missing_retention
+     Details: No retention policy for sensitive data in text_box
+     Severity: medium
+     Line 84: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 86: missing_retention
+     Details: No retention policy for sensitive data in soup
+     Severity: medium
+     Line 87: missing_retention
+     Details: No retention policy for sensitive data in articles
+     Severity: medium
+     Line 88: missing_retention
+     Details: No retention policy for sensitive data in news
+     Severity: medium
+     Line 89: missing_retention
+     Details: No retention policy for sensitive data in links
+     Severity: medium
+     Line 90: missing_retention
+     Details: No retention policy for sensitive data in links
+     Severity: medium
+     Line 99: missing_retention
+     Details: No retention policy for sensitive data in unread
+     Severity: medium
+     Line 18: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 24: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 24: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 26: missing_retention
+     Details: No retention policy for sensitive data in preds
+     Severity: medium
+     Line 27: missing_retention
+     Details: No retention policy for sensitive data in c
+     Severity: medium
+     Line 66: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 72: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 72: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 74: missing_retention
+     Details: No retention policy for sensitive data in cap
+     Severity: medium
+     Line 83: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 87: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 99: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 101: missing_retention
+     Details: No retention policy for sensitive data in ele
+     Severity: medium
+     Line 102: missing_retention
+     Details: No retention policy for sensitive data in action
+     Severity: medium
+     Line 107: missing_retention
+     Details: No retention policy for sensitive data in name
+     Severity: medium
+     Line 109: missing_retention
+     Details: No retention policy for sensitive data in message
+     Severity: medium
+     Line 110: missing_retention
+     Details: No retention policy for sensitive data in images
+     Severity: medium
+     Line 110: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 86: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 107: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 109: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 114: missing_retention
+     Details: No retention policy for sensitive data in text_box
+     Severity: medium
+     Line 115: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 125: missing_retention
+     Details: No retention policy for sensitive data in text_box
+     Severity: medium
+     Line 126: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 88: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 114: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 120: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 120: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 125: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 89: insecure_pymongo_usage
+     Details: Using pymongo without proper security middleware
+     Severity: high
+     Line 90: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure12.py
+--------------------------
+
+GDPR Violations Found:
+     Line 5: missing_retention
+     Details: No retention policy for sensitive data in api_key
+     Severity: medium
+     Line 8: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 10: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 29: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 11: missing_retention
+     Details: No retention policy for sensitive data in server
+     Severity: medium
+     Line 15: missing_retention
+     Details: No retention policy for sensitive data in subject
+     Severity: medium
+     Line 16: missing_retention
+     Details: No retention policy for sensitive data in body
+     Severity: medium
+     Line 18: missing_retention
+     Details: No retention policy for sensitive data in msg
+     Severity: medium
+     Line 30: missing_retention
+     Details: No retention policy for sensitive data in prices
+     Severity: medium
+     Line 31: missing_retention
+     Details: No retention policy for sensitive data in stockPrice
+     Severity: medium
+     Line 30: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure13.py
+--------------------------
+
+GDPR Violations Found:
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in queries
+     Severity: medium
+     Line 55: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 60: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 68: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 74: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 78: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 82: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 92: unprotected_parameter
+     Details: Function parameter table_name contains sensitive data without protection
+     Severity: medium
+     Line 146: unprotected_parameter
+     Details: Function parameter username contains sensitive data without protection
+     Severity: medium
+     Line 150: unprotected_parameter
+     Details: Function parameter username contains sensitive data without protection
+     Severity: medium
+     Line 150: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 156: missing_retention
+     Details: No retention policy for sensitive data in user
+     Severity: medium
+     Line 160: missing_retention
+     Details: No retention policy for sensitive data in cursor
+     Severity: medium
+     Line 25: missing_retention
+     Details: No retention policy for sensitive data in cursor
+     Severity: medium
+     Line 34: missing_retention
+     Details: No retention policy for sensitive data in cursor
+     Severity: medium
+     Line 42: missing_retention
+     Details: No retention policy for sensitive data in vals
+     Severity: medium
+     Line 43: missing_retention
+     Details: No retention policy for sensitive data in locs
+     Severity: medium
+     Line 44: missing_retention
+     Details: No retention policy for sensitive data in conds
+     Severity: medium
+     Line 45: missing_retention
+     Details: No retention policy for sensitive data in subs
+     Severity: medium
+     Line 46: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 50: missing_retention
+     Details: No retention policy for sensitive data in vals
+     Severity: medium
+     Line 51: missing_retention
+     Details: No retention policy for sensitive data in locs
+     Severity: medium
+     Line 52: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 56: missing_retention
+     Details: No retention policy for sensitive data in values
+     Severity: medium
+     Line 57: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 61: missing_retention
+     Details: No retention policy for sensitive data in updates
+     Severity: medium
+     Line 62: missing_retention
+     Details: No retention policy for sensitive data in conds
+     Severity: medium
+     Line 63: missing_retention
+     Details: No retention policy for sensitive data in vals
+     Severity: medium
+     Line 64: missing_retention
+     Details: No retention policy for sensitive data in subs
+     Severity: medium
+     Line 65: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 69: missing_retention
+     Details: No retention policy for sensitive data in conds
+     Severity: medium
+     Line 70: missing_retention
+     Details: No retention policy for sensitive data in subs
+     Severity: medium
+     Line 71: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 75: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 79: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 83: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 126: missing_retention
+     Details: No retention policy for sensitive data in cursor
+     Severity: medium
+     Line 127: missing_retention
+     Details: No retention policy for sensitive data in results
+     Severity: medium
+     Line 147: missing_retention
+     Details: No retention policy for sensitive data in results
+     Severity: medium
+     Line 151: missing_retention
+     Details: No retention policy for sensitive data in results
+     Severity: medium
+     Line 47: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 53: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 94: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 94: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 147: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 147: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 151: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 151: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 27: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+     Line 29: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+     Line 36: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+     Line 38: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure14.py
+--------------------------
+
+GDPR Violations Found:
+     Line 6: missing_retention
+     Details: No retention policy for sensitive data in cnx
+     Severity: medium
+     Line 7: missing_retention
+     Details: No retention policy for sensitive data in cursor
+     Severity: medium
+     Line 10: unprotected_storage
+     Details: Storing sensitive data in variable query without protection
+     Severity: high
+     Line 10: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 20: missing_retention
+     Details: No retention policy for sensitive data in root
+     Severity: medium
+     Line 24: missing_retention
+     Details: No retention policy for sensitive data in frm
+     Severity: medium
+     Line 31: missing_retention
+     Details: No retention policy for sensitive data in names_listbox
+     Severity: medium
+     Line 11: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+     Line 15: missing_retention
+     Details: No retention policy for sensitive data in names
+     Severity: medium
+     Line 17: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 17: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure15.py
+--------------------------
+
+GDPR Violations Found:
+     Line 14: unprotected_parameter
+     Details: Function parameter column_names contains sensitive data without protection
+     Severity: medium
+     Line 30: missing_retention
+     Details: No retention policy for sensitive data in database
+     Severity: medium
+     Line 31: missing_retention
+     Details: No retention policy for sensitive data in query
+     Severity: medium
+     Line 34: missing_retention
+     Details: No retention policy for sensitive data in markdown_table
+     Severity: medium
+     Line 5: missing_retention
+     Details: No retention policy for sensitive data in connection
+     Severity: medium
+     Line 6: missing_retention
+     Details: No retention policy for sensitive data in cursor
+     Severity: medium
+     Line 8: missing_retention
+     Details: No retention policy for sensitive data in results
+     Severity: medium
+     Line 9: missing_retention
+     Details: No retention policy for sensitive data in column_names
+     Severity: medium
+     Line 15: missing_retention
+     Details: No retention policy for sensitive data in markdown_table
+     Severity: medium
+     Line 7: insecure_sqlalchemy_usage
+     Details: Using sqlalchemy without proper security middleware
+     Severity: high
+     Line 19: missing_retention
+     Details: No retention policy for sensitive data in formatted_row
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure16.py
+--------------------------
+
+GDPR Violations Found:
+     Line 15: missing_retention
+     Details: No retention policy for sensitive data in fields
+     Severity: medium
+     Line 19: missing_retention
+     Details: No retention policy for sensitive data in fields
+     Severity: medium
+     Line 20: missing_retention
+     Details: No retention policy for sensitive data in query_create
+     Severity: medium
+     Line 26: missing_retention
+     Details: No retention policy for sensitive data in query_select
+     Severity: medium
+     Line 29: missing_retention
+     Details: No retention policy for sensitive data in temp
+     Severity: medium
+     Line 30: missing_retention
+     Details: No retention policy for sensitive data in i
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure17.py
+--------------------------
+
+GDPR Violations Found:
+     Line 10: missing_retention
+     Details: No retention policy for sensitive data in birth
+     Severity: medium
+     Line 11: missing_retention
+     Details: No retention policy for sensitive data in death
+     Severity: medium
+     Line 12: missing_retention
+     Details: No retention policy for sensitive data in bd
+     Severity: medium
+     Line 18: missing_retention
+     Details: No retention policy for sensitive data in ss
+     Severity: medium
+     Line 21: missing_retention
+     Details: No retention policy for sensitive data in n
+     Severity: medium
+     Line 23: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+     Line 26: missing_retention
+     Details: No retention policy for sensitive data in ss10
+     Severity: medium
+     Line 28: missing_retention
+     Details: No retention policy for sensitive data in ss10
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure18.py
+--------------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: online_insecure19.py
+--------------------------
+
+GDPR Violations Found:
+     Line 3: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 11: unprotected_storage
+     Details: Storing sensitive data in variable email_1 without protection
+     Severity: high
+     Line 11: missing_retention
+     Details: No retention policy for sensitive data in email_1
+     Severity: medium
+     Line 12: unprotected_storage
+     Details: Storing sensitive data in variable email_2 without protection
+     Severity: high
+     Line 12: missing_retention
+     Details: No retention policy for sensitive data in email_2
+     Severity: medium
+     Line 13: missing_retention
+     Details: No retention policy for sensitive data in email_3
+     Severity: medium
+     Line 14: unprotected_storage
+     Details: Storing sensitive data in variable email_4 without protection
+     Severity: high
+     Line 14: missing_retention
+     Details: No retention policy for sensitive data in email_4
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in email_pattern
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure2.py
+-------------------------
+
+GDPR Violations Found:
+     Line 761: missing_retention
+     Details: No retention policy for sensitive data in app
+     Severity: medium
+     Line 762: missing_retention
+     Details: No retention policy for sensitive data in window
+     Severity: medium
+     Line 22: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 23: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 30: missing_retention
+     Details: No retention policy for sensitive data in username
+     Severity: medium
+     Line 31: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 33: unprotected_storage
+     Details: Storing sensitive data in variable sql without protection
+     Severity: high
+     Line 33: missing_retention
+     Details: No retention policy for sensitive data in sql
+     Severity: medium
+     Line 36: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 147: missing_retention
+     Details: No retention policy for sensitive data in book_title
+     Severity: medium
+     Line 148: missing_retention
+     Details: No retention policy for sensitive data in client_name
+     Severity: medium
+     Line 149: missing_retention
+     Details: No retention policy for sensitive data in type
+     Severity: medium
+     Line 150: missing_retention
+     Details: No retention policy for sensitive data in days_number
+     Severity: medium
+     Line 151: missing_retention
+     Details: No retention policy for sensitive data in today_date
+     Severity: medium
+     Line 152: missing_retention
+     Details: No retention policy for sensitive data in to_date
+     Severity: medium
+     Line 180: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 204: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 225: missing_retention
+     Details: No retention policy for sensitive data in book_title
+     Severity: medium
+     Line 226: missing_retention
+     Details: No retention policy for sensitive data in book_description
+     Severity: medium
+     Line 227: missing_retention
+     Details: No retention policy for sensitive data in book_code
+     Severity: medium
+     Line 228: missing_retention
+     Details: No retention policy for sensitive data in book_category
+     Severity: medium
+     Line 229: missing_retention
+     Details: No retention policy for sensitive data in book_author
+     Severity: medium
+     Line 230: missing_retention
+     Details: No retention policy for sensitive data in book_publisher
+     Severity: medium
+     Line 231: missing_retention
+     Details: No retention policy for sensitive data in book_price
+     Severity: medium
+     Line 258: missing_retention
+     Details: No retention policy for sensitive data in book_title
+     Severity: medium
+     Line 260: unprotected_storage
+     Details: Storing sensitive data in variable sql without protection
+     Severity: high
+     Line 260: missing_retention
+     Details: No retention policy for sensitive data in sql
+     Severity: medium
+     Line 263: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 282: missing_retention
+     Details: No retention policy for sensitive data in book_title
+     Severity: medium
+     Line 283: missing_retention
+     Details: No retention policy for sensitive data in book_description
+     Severity: medium
+     Line 284: missing_retention
+     Details: No retention policy for sensitive data in book_code
+     Severity: medium
+     Line 285: missing_retention
+     Details: No retention policy for sensitive data in book_category
+     Severity: medium
+     Line 286: missing_retention
+     Details: No retention policy for sensitive data in book_author
+     Severity: medium
+     Line 287: missing_retention
+     Details: No retention policy for sensitive data in book_publisher
+     Severity: medium
+     Line 288: missing_retention
+     Details: No retention policy for sensitive data in book_price
+     Severity: medium
+     Line 291: missing_retention
+     Details: No retention policy for sensitive data in search_book_title
+     Severity: medium
+     Line 306: missing_retention
+     Details: No retention policy for sensitive data in book_title
+     Severity: medium
+     Line 308: missing_retention
+     Details: No retention policy for sensitive data in warning
+     Severity: medium
+     Line 324: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 342: missing_retention
+     Details: No retention policy for sensitive data in client_name
+     Severity: medium
+     Line 343: missing_retention
+     Details: No retention policy for sensitive data in client_email
+     Severity: medium
+     Line 344: missing_retention
+     Details: No retention policy for sensitive data in client_nationalid
+     Severity: medium
+     Line 360: missing_retention
+     Details: No retention policy for sensitive data in client_national_id
+     Severity: medium
+     Line 364: unprotected_storage
+     Details: Storing sensitive data in variable sql without protection
+     Severity: high
+     Line 364: missing_retention
+     Details: No retention policy for sensitive data in sql
+     Severity: medium
+     Line 366: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 375: missing_retention
+     Details: No retention policy for sensitive data in client_original_national_id
+     Severity: medium
+     Line 376: missing_retention
+     Details: No retention policy for sensitive data in client_name
+     Severity: medium
+     Line 377: missing_retention
+     Details: No retention policy for sensitive data in client_email
+     Severity: medium
+     Line 378: missing_retention
+     Details: No retention policy for sensitive data in client_national_id
+     Severity: medium
+     Line 393: missing_retention
+     Details: No retention policy for sensitive data in client_original_national_id
+     Severity: medium
+     Line 396: missing_retention
+     Details: No retention policy for sensitive data in warning_message
+     Severity: medium
+     Line 419: missing_retention
+     Details: No retention policy for sensitive data in username
+     Severity: medium
+     Line 420: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 421: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 422: missing_retention
+     Details: No retention policy for sensitive data in password2
+     Severity: medium
+     Line 442: missing_retention
+     Details: No retention policy for sensitive data in username
+     Severity: medium
+     Line 443: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 445: unprotected_storage
+     Details: Storing sensitive data in variable sql without protection
+     Severity: high
+     Line 445: missing_retention
+     Details: No retention policy for sensitive data in sql
+     Severity: medium
+     Line 448: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 462: missing_retention
+     Details: No retention policy for sensitive data in username
+     Severity: medium
+     Line 463: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 464: missing_retention
+     Details: No retention policy for sensitive data in password
+     Severity: medium
+     Line 465: missing_retention
+     Details: No retention policy for sensitive data in password2
+     Severity: medium
+     Line 467: missing_retention
+     Details: No retention policy for sensitive data in original_name
+     Severity: medium
+     Line 495: missing_retention
+     Details: No retention policy for sensitive data in category_name
+     Severity: medium
+     Line 513: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 532: missing_retention
+     Details: No retention policy for sensitive data in author_name
+     Severity: medium
+     Line 548: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 567: missing_retention
+     Details: No retention policy for sensitive data in publisher_name
+     Severity: medium
+     Line 584: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 606: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 620: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 633: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 650: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 651: missing_retention
+     Details: No retention policy for sensitive data in wb
+     Severity: medium
+     Line 652: missing_retention
+     Details: No retention policy for sensitive data in sheet1
+     Severity: medium
+     Line 661: missing_retention
+     Details: No retention policy for sensitive data in row_number
+     Severity: medium
+     Line 679: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 681: missing_retention
+     Details: No retention policy for sensitive data in wb
+     Severity: medium
+     Line 682: missing_retention
+     Details: No retention policy for sensitive data in sheet1
+     Severity: medium
+     Line 693: missing_retention
+     Details: No retention policy for sensitive data in row_number
+     Severity: medium
+     Line 711: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 713: missing_retention
+     Details: No retention policy for sensitive data in wb
+     Severity: medium
+     Line 714: missing_retention
+     Details: No retention policy for sensitive data in sheet1
+     Severity: medium
+     Line 721: missing_retention
+     Details: No retention policy for sensitive data in row_number
+     Severity: medium
+     Line 739: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 740: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 744: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 745: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 749: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 750: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 754: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 755: missing_retention
+     Details: No retention policy for sensitive data in style
+     Severity: medium
+     Line 23: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 191: missing_retention
+     Details: No retention policy for sensitive data in row_position
+     Severity: medium
+     Line 214: missing_retention
+     Details: No retention policy for sensitive data in row_position
+     Severity: medium
+     Line 310: unprotected_storage
+     Details: Storing sensitive data in variable sql without protection
+     Severity: high
+     Line 310: missing_retention
+     Details: No retention policy for sensitive data in sql
+     Severity: medium
+     Line 335: missing_retention
+     Details: No retention policy for sensitive data in row_position
+     Severity: medium
+     Line 403: unprotected_storage
+     Details: Storing sensitive data in variable sql without protection
+     Severity: high
+     Line 403: missing_retention
+     Details: No retention policy for sensitive data in sql
+     Severity: medium
+     Line 655: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 655: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 663: missing_retention
+     Details: No retention policy for sensitive data in column_number
+     Severity: medium
+     Line 685: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 685: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 695: missing_retention
+     Details: No retention policy for sensitive data in column_number
+     Severity: medium
+     Line 716: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 716: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 717: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 717: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 718: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 718: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 723: missing_retention
+     Details: No retention policy for sensitive data in column_number
+     Severity: medium
+     Line 740: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 745: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 750: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 755: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 523: missing_retention
+     Details: No retention policy for sensitive data in row_position
+     Severity: medium
+     Line 559: missing_retention
+     Details: No retention policy for sensitive data in row_position
+     Severity: medium
+     Line 595: missing_retention
+     Details: No retention policy for sensitive data in row_position
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure20.py
+--------------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: online_insecure3.py
+-------------------------
+
+GDPR Violations Found:
+     Line 11: missing_retention
+     Details: No retention policy for sensitive data in db
+     Severity: medium
+     Line 16: missing_retention
+     Details: No retention policy for sensitive data in Mail
+     Severity: medium
+     Line 17: missing_retention
+     Details: No retention policy for sensitive data in db
+     Severity: medium
+     Line 19: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 20: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 21: missing_retention
+     Details: No retention policy for sensitive data in content
+     Severity: medium
+     Line 45: missing_retention
+     Details: No retention policy for sensitive data in db
+     Severity: medium
+     Line 46: missing_retention
+     Details: No retention policy for sensitive data in emails
+     Severity: medium
+     Line 48: missing_retention
+     Details: No retention policy for sensitive data in emails
+     Severity: medium
+     Line 19: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 23: missing_retention
+     Details: No retention policy for sensitive data in content
+     Severity: medium
+     Line 24: missing_retention
+     Details: No retention policy for sensitive data in mail
+     Severity: medium
+     Line 33: missing_retention
+     Details: No retention policy for sensitive data in mail
+     Severity: medium
+     Line 31: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 31: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure4.py
+-------------------------
+
+GDPR Violations Found:
+     Line 188: unprotected_parameter
+     Details: Function parameter default_language contains sensitive data without protection
+     Severity: medium
+     Line 188: unprotected_parameter
+     Details: Function parameter image contains sensitive data without protection
+     Severity: medium
+     Line 564: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 574: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 574: unprotected_parameter
+     Details: Function parameter image_url contains sensitive data without protection
+     Severity: medium
+     Line 584: unprotected_parameter
+     Details: Function parameter new_name contains sensitive data without protection
+     Severity: medium
+     Line 627: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 627: unprotected_parameter
+     Details: Function parameter image_url contains sensitive data without protection
+     Severity: medium
+     Line 637: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 647: unprotected_parameter
+     Details: Function parameter language contains sensitive data without protection
+     Severity: medium
+     Line 802: unprotected_parameter
+     Details: Function parameter filename contains sensitive data without protection
+     Severity: medium
+     Line 23: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 24: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 61: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 62: missing_retention
+     Details: No retention policy for sensitive data in completed
+     Severity: medium
+     Line 63: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 109: missing_retention
+     Details: No retention policy for sensitive data in tutorial
+     Severity: medium
+     Line 138: missing_retention
+     Details: No retention policy for sensitive data in tutorial
+     Severity: medium
+     Line 194: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 205: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 206: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 236: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 237: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 277: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 278: missing_retention
+     Details: No retention policy for sensitive data in completed
+     Severity: medium
+     Line 279: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 369: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 370: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 410: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 413: missing_retention
+     Details: No retention policy for sensitive data in completed
+     Severity: medium
+     Line 414: missing_retention
+     Details: No retention policy for sensitive data in tutorial_list
+     Severity: medium
+     Line 515: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 537: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 550: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 551: missing_retention
+     Details: No retention policy for sensitive data in returning
+     Severity: medium
+     Line 569: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 579: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 589: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 599: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 609: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 610: missing_retention
+     Details: No retention policy for sensitive data in returning
+     Severity: medium
+     Line 622: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 632: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 642: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 656: missing_retention
+     Details: No retention policy for sensitive data in total_completions
+     Severity: medium
+     Line 699: missing_retention
+     Details: No retention policy for sensitive data in scoreboard_tutorial_list
+     Severity: medium
+     Line 722: missing_retention
+     Details: No retention policy for sensitive data in total_completions
+     Severity: medium
+     Line 725: missing_retention
+     Details: No retention policy for sensitive data in total_users
+     Severity: medium
+     Line 738: missing_retention
+     Details: No retention policy for sensitive data in scores
+     Severity: medium
+     Line 750: missing_retention
+     Details: No retention policy for sensitive data in success
+     Severity: medium
+     Line 760: missing_retention
+     Details: No retention policy for sensitive data in tutorials
+     Severity: medium
+     Line 777: missing_retention
+     Details: No retention policy for sensitive data in headers
+     Severity: medium
+     Line 806: missing_retention
+     Details: No retention policy for sensitive data in headers
+     Severity: medium
+     Line 810: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 111: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 140: missing_retention
+     Details: No retention policy for sensitive data in data
+     Severity: medium
+     Line 141: missing_retention
+     Details: No retention policy for sensitive data in completed
+     Severity: medium
+     Line 194: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 194: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 569: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 569: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 579: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 579: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 589: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 589: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 632: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 632: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 656: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 656: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 661: missing_retention
+     Details: No retention policy for sensitive data in total_completions
+     Severity: medium
+     Line 663: missing_retention
+     Details: No retention policy for sensitive data in total_completions
+     Severity: medium
+     Line 671: missing_retention
+     Details: No retention policy for sensitive data in tuto_details
+     Severity: medium
+     Line 672: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 675: missing_retention
+     Details: No retention policy for sensitive data in user
+     Severity: medium
+     Line 685: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 696: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 696: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 705: missing_retention
+     Details: No retention policy for sensitive data in uuid
+     Severity: medium
+     Line 706: missing_retention
+     Details: No retention policy for sensitive data in tmp
+     Severity: medium
+     Line 718: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 718: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 721: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 721: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 735: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 735: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 747: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 747: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 782: missing_retention
+     Details: No retention policy for sensitive data in r
+     Severity: medium
+     Line 786: missing_retention
+     Details: No retention policy for sensitive data in r
+     Severity: medium
+     Line 787: missing_retention
+     Details: No retention policy for sensitive data in markdowns
+     Severity: medium
+     Line 815: missing_retention
+     Details: No retention policy for sensitive data in r
+     Severity: medium
+     Line 820: missing_retention
+     Details: No retention policy for sensitive data in r
+     Severity: medium
+     Line 282: missing_retention
+     Details: No retention policy for sensitive data in completed
+     Severity: medium
+     Line 418: missing_retention
+     Details: No retention policy for sensitive data in completed
+     Severity: medium
+     Line 672: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 672: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 685: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 685: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 705: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 707: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 782: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 284: missing_retention
+     Details: No retention policy for sensitive data in found
+     Severity: medium
+     Line 420: missing_retention
+     Details: No retention policy for sensitive data in found
+     Severity: medium
+     Line 287: missing_retention
+     Details: No retention policy for sensitive data in found
+     Severity: medium
+     Line 423: missing_retention
+     Details: No retention policy for sensitive data in found
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure5.py
+-------------------------
+
+GDPR Violations Found:
+     Line 90: missing_retention
+     Details: No retention policy for sensitive data in settings
+     Severity: medium
+     Line 100: missing_retention
+     Details: No retention policy for sensitive data in parent
+     Severity: medium
+     Line 101: missing_retention
+     Details: No retention policy for sensitive data in child
+     Severity: medium
+     Line 119: missing_retention
+     Details: No retention policy for sensitive data in authConfig
+     Severity: medium
+     Line 123: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 141: missing_retention
+     Details: No retention policy for sensitive data in authConfigInitialised
+     Severity: medium
+     Line 295: unprotected_parameter
+     Details: Function parameter user contains sensitive data without protection
+     Severity: medium
+     Line 182: missing_retention
+     Details: No retention policy for sensitive data in resp
+     Severity: medium
+     Line 244: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 310: missing_retention
+     Details: No retention policy for sensitive data in index
+     Severity: medium
+     Line 347: missing_retention
+     Details: No retention policy for sensitive data in resp
+     Severity: medium
+     Line 130: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 130: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 203: missing_retention
+     Details: No retention policy for sensitive data in authConfigId
+     Severity: medium
+     Line 191: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 355: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 214: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 367: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure6.py
+-------------------------
+
+GDPR Violations Found:
+     Line 11: missing_retention
+     Details: No retention policy for sensitive data in N
+     Severity: medium
+     Line 12: missing_retention
+     Details: No retention policy for sensitive data in g
+     Severity: medium
+     Line 13: missing_retention
+     Details: No retention policy for sensitive data in k
+     Severity: medium
+     Line 16: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 17: missing_retention
+     Details: No retention policy for sensitive data in salt
+     Severity: medium
+     Line 18: missing_retention
+     Details: No retention policy for sensitive data in x_h
+     Severity: medium
+     Line 19: missing_retention
+     Details: No retention policy for sensitive data in x
+     Severity: medium
+     Line 20: missing_retention
+     Details: No retention policy for sensitive data in verifier
+     Severity: medium
+     Line 25: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 27: missing_retention
+     Details: No retention policy for sensitive data in A
+     Severity: medium
+     Line 28: missing_retention
+     Details: No retention policy for sensitive data in b
+     Severity: medium
+     Line 29: missing_retention
+     Details: No retention policy for sensitive data in B
+     Severity: medium
+     Line 32: missing_retention
+     Details: No retention policy for sensitive data in u_h
+     Severity: medium
+     Line 33: missing_retention
+     Details: No retention policy for sensitive data in u
+     Severity: medium
+     Line 34: missing_retention
+     Details: No retention policy for sensitive data in S
+     Severity: medium
+     Line 35: missing_retention
+     Details: No retention policy for sensitive data in K
+     Severity: medium
+     Line 36: missing_retention
+     Details: No retention policy for sensitive data in sent_digest
+     Severity: medium
+     Line 37: missing_retention
+     Details: No retention policy for sensitive data in digest
+     Severity: medium
+     Line 38: missing_retention
+     Details: No retention policy for sensitive data in ok
+     Severity: medium
+     Line 44: missing_retention
+     Details: No retention policy for sensitive data in a
+     Severity: medium
+     Line 45: missing_retention
+     Details: No retention policy for sensitive data in A
+     Severity: medium
+     Line 48: missing_retention
+     Details: No retention policy for sensitive data in salt
+     Severity: medium
+     Line 49: missing_retention
+     Details: No retention policy for sensitive data in B
+     Severity: medium
+     Line 50: missing_retention
+     Details: No retention policy for sensitive data in u_h
+     Severity: medium
+     Line 51: missing_retention
+     Details: No retention policy for sensitive data in u
+     Severity: medium
+     Line 52: missing_retention
+     Details: No retention policy for sensitive data in x_h
+     Severity: medium
+     Line 53: missing_retention
+     Details: No retention policy for sensitive data in x
+     Severity: medium
+     Line 54: missing_retention
+     Details: No retention policy for sensitive data in S
+     Severity: medium
+     Line 55: missing_retention
+     Details: No retention policy for sensitive data in K
+     Severity: medium
+     Line 65: missing_retention
+     Details: No retention policy for sensitive data in salt
+     Severity: medium
+     Line 66: missing_retention
+     Details: No retention policy for sensitive data in B
+     Severity: medium
+     Line 67: missing_retention
+     Details: No retention policy for sensitive data in S
+     Severity: medium
+     Line 68: missing_retention
+     Details: No retention policy for sensitive data in K
+     Severity: medium
+     Line 26: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 26: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure7.py
+-------------------------
+
+GDPR Violations Found:
+     Line 13: unprotected_storage
+     Details: Storing sensitive data in variable USERS_TABLE without protection
+     Severity: high
+     Line 13: missing_retention
+     Details: No retention policy for sensitive data in USERS_TABLE
+     Severity: medium
+     Line 14: missing_retention
+     Details: No retention policy for sensitive data in GROUPS_TABLE
+     Severity: medium
+     Line 15: unprotected_storage
+     Details: Storing sensitive data in variable USER_SESSIONS_TABLE without protection
+     Severity: high
+     Line 15: missing_retention
+     Details: No retention policy for sensitive data in USER_SESSIONS_TABLE
+     Severity: medium
+     Line 16: missing_retention
+     Details: No retention policy for sensitive data in GROUP_STATES_TABLE
+     Severity: medium
+     Line 26: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 26: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 26: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 52: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 69: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 74: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 79: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 129: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 156: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 172: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 172: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 172: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 191: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 200: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 220: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 257: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 276: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 295: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 310: unprotected_parameter
+     Details: Function parameter name contains sensitive data without protection
+     Severity: medium
+     Line 323: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 335: unprotected_parameter
+     Details: Function parameter nickname contains sensitive data without protection
+     Severity: medium
+     Line 350: unprotected_parameter
+     Details: Function parameter password contains sensitive data without protection
+     Severity: medium
+     Line 36: missing_retention
+     Details: No retention policy for sensitive data in exists
+     Severity: medium
+     Line 53: missing_retention
+     Details: No retention policy for sensitive data in session
+     Severity: medium
+     Line 80: missing_retention
+     Details: No retention policy for sensitive data in presence
+     Severity: medium
+     Line 103: missing_retention
+     Details: No retention policy for sensitive data in conn
+     Severity: medium
+     Line 121: missing_retention
+     Details: No retention policy for sensitive data in conn
+     Severity: medium
+     Line 134: missing_retention
+     Details: No retention policy for sensitive data in exists
+     Severity: medium
+     Line 157: missing_retention
+     Details: No retention policy for sensitive data in exists
+     Severity: medium
+     Line 182: missing_retention
+     Details: No retention policy for sensitive data in result
+     Severity: medium
+     Line 205: missing_retention
+     Details: No retention policy for sensitive data in current_permissions
+     Severity: medium
+     Line 209: missing_retention
+     Details: No retention policy for sensitive data in permissions_for_channel
+     Severity: medium
+     Line 232: missing_retention
+     Details: No retention policy for sensitive data in exists
+     Severity: medium
+     Line 262: missing_retention
+     Details: No retention policy for sensitive data in group
+     Severity: medium
+     Line 300: missing_retention
+     Details: No retention policy for sensitive data in deleted_group
+     Severity: medium
+     Line 304: missing_retention
+     Details: No retention policy for sensitive data in deleted_state
+     Severity: medium
+     Line 328: missing_retention
+     Details: No retention policy for sensitive data in valid_email
+     Severity: medium
+     Line 340: missing_retention
+     Details: No retention policy for sensitive data in min_len
+     Severity: medium
+     Line 341: missing_retention
+     Details: No retention policy for sensitive data in max_len
+     Severity: medium
+     Line 343: missing_retention
+     Details: No retention policy for sensitive data in valid_nickname
+     Severity: medium
+     Line 355: missing_retention
+     Details: No retention policy for sensitive data in min_len
+     Severity: medium
+     Line 356: missing_retention
+     Details: No retention policy for sensitive data in max_len
+     Severity: medium
+     Line 358: missing_retention
+     Details: No retention policy for sensitive data in valid_password
+     Severity: medium
+     Line 209: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 237: missing_retention
+     Details: No retention policy for sensitive data in group
+     Severity: medium
+     Line 248: missing_retention
+     Details: No retention policy for sensitive data in state
+     Severity: medium
+     Line 36: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 36: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 53: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 53: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 80: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 134: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 134: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 157: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 157: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 232: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 232: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 262: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 262: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 277: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 277: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 70: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 70: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 75: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 196: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 196: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 205: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 205: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 212: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 212: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 300: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 300: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 304: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 304: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 315: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 315: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 65: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 65: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 94: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 139: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 139: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 142: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 142: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 162: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 162: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 267: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 267: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 270: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 270: unprotected_sensitive_data
+     Details: Handling sensitive data without encryption
+     Severity: critical
+     Line 291: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+     Line 144: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure8.py
+-------------------------
+Error: 'ConsentVisitor' object has no attribute 'get_call_name'
+
+File: online_insecure9.py
+-------------------------
+
+GDPR Violations Found:
+     Line 8: missing_retention
+     Details: No retention policy for sensitive data in addr
+     Severity: medium
+     Line 9: missing_retention
+     Details: No retention policy for sensitive data in test_url
+     Severity: medium
+     Line 13: unprotected_storage
+     Details: Storing sensitive data in variable content_type without protection
+     Severity: high
+     Line 13: missing_retention
+     Details: No retention policy for sensitive data in content_type
+     Severity: medium
+     Line 14: missing_retention
+     Details: No retention policy for sensitive data in headers
+     Severity: medium
+     Line 15: missing_retention
+     Details: No retention policy for sensitive data in name
+     Severity: medium
+     Line 17: missing_retention
+     Details: No retention policy for sensitive data in img
+     Severity: medium
+     Line 23: missing_retention
+     Details: No retention policy for sensitive data in response
+     Severity: medium
+     Line 28: missing_retention
+     Details: No retention policy for sensitive data in example
+     Severity: medium
+     Line 17: unauthorized_db_access
+     Details: Database operation with sensitive data without consent
+     Severity: high
+     Line 17: unencrypted_db_operation
+     Details: Unencrypted database operation with sensitive data
+     Severity: critical
+     Line 28: missing_consent
+     Details: Collecting personal data without explicit consent
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure.py
+---------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in secure_data
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure10.py
+-----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Looks Good for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure2.py
+----------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in consent
+     Severity: medium
+     Line 3: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 3: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 6: unauthorized_data_transfer
+     Details: Transferring sensitive data without consent
+     Severity: critical
+     Line 6: unencrypted_transfer
+     Details: Transferring sensitive data without encryption
+     Severity: critical
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure3.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in url
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure4.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter ssn contains sensitive data without protection
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in secure_data
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure5.py
+----------------
+
+GDPR Violations Found:
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in secure_data
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure6.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in secure_data
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure7.py
+----------------
+
+GDPR Violations Found:
+     Line 1: unprotected_parameter
+     Details: Function parameter email contains sensitive data without protection
+     Severity: medium
+     Line 4: unprotected_storage
+     Details: Storing sensitive data in variable email without protection
+     Severity: high
+     Line 4: missing_retention
+     Details: No retention policy for sensitive data in email
+     Severity: medium
+     Line 5: missing_retention
+     Details: No retention policy for sensitive data in url
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure8.py
+----------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in logfile
+     Severity: medium
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure9.py
+----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Looks Good for Has Consent
+  Looks Good for Has Encryption
+  Looks Good for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------

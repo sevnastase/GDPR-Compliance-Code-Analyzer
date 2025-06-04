@@ -1,0 +1,247 @@
+GDPR Compliance Analysis Summary
+==============================
+
+
+File: github-test1.py
+---------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: insecure1.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure10.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure11.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure12.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure13.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure14.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure15.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: insecure16.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in cardnr
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure17.py
+-------------------
+
+GDPR Violations Found:
+     Line 1: missing_retention
+     Details: No retention policy for sensitive data in ssn
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure18.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: insecure19.py
+-------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure2.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure3.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure4.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure5.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure6.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure7.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure8.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: insecure9.py
+------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_failed1.py
+-----------------------
+Error: invalid syntax (<unknown>, line 3)
+
+File: online_failed2.py
+-----------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_failed3.py
+-----------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_failed4.py
+-----------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_failed5.py
+-----------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure1.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure10.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure11.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure12.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure13.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure14.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure15.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure16.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure17.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure18.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure19.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure2.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure20.py
+--------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure3.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure4.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure5.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: online_insecure6.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure7.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure8.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: online_insecure9.py
+-------------------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure.py
+---------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure10.py
+-----------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: secure2.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure3.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure4.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure5.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: secure6.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure7.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'has_encryption'
+
+File: secure8.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'
+
+File: secure9.py
+----------------
+Error: 'TaintAnalyzer' object has no attribute 'get_call_name'

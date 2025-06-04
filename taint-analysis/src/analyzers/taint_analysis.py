@@ -186,26 +186,77 @@ class TaintAnalyzer:
                         return True
         return False
 
-    def has_consent(self, node: ast.Call) -> bool:
-        """Check if consent is obtained before data collection"""
-        consent_functions = set(GDPR_REQUIREMENTS['consent']['functions'])
-        consent_patterns = {'consent', 'permission', 'authorize', 'accept', 'agree'}
+    def has_consent(self, node: ast.AST) -> bool:
+        """Check if proper consent is obtained for data processing"""
+        # Start with non-compliant status
+        self.gdpr.compliance_status['has_consent'] = False
         
-        # Check function call chain for consent verification
-        current = node
-        while hasattr(current, 'parent'):
-            if isinstance(current, ast.Call):
-                if isinstance(current.func, ast.Name):
-                    if (current.func.id in consent_functions or 
-                        any(pattern in current.func.id.lower() for pattern in consent_patterns)):
-                        self.gdpr.compliance_status['has_consent'] = True
-                        return True
-                elif isinstance(current.func, ast.Attribute):
-                    if any(pattern in current.func.attr.lower() for pattern in consent_patterns):
-                        self.gdpr.compliance_status['has_consent'] = True
-                        return True
-            current = getattr(current, 'parent', None)
-        return False
+        # Get all required patterns and functions
+        consent_functions = set(GDPR_REQUIREMENTS['consent']['functions'])
+        consent_patterns = set(GDPR_REQUIREMENTS['consent']['required_patterns'])
+        
+        # Find root node
+        root = node
+        while hasattr(root, 'parent'):
+            root = getattr(root, 'parent')
+        
+        class ConsentVisitor(ast.NodeVisitor):
+            def __init__(self):
+                self.found_consent = False
+                self.consent_before_usage = False
+                self.data_usage_line = 0
+                self.last_consent_line = 0
+                
+            def visit_Call(self, node):
+                # Track data usage line
+                if isinstance(node, ast.Call) and hasattr(node, 'lineno'):
+                    self.data_usage_line = node.lineno
+                    
+                # Check function calls for consent
+                if isinstance(node.func, ast.Name):
+                    if (node.func.id in consent_functions or 
+                        any(pattern in node.func.id.lower() for pattern in consent_patterns)):
+                        self.found_consent = True
+                        if hasattr(node, 'lineno'):
+                            self.last_consent_line = node.lineno
+                            # Check if consent is obtained before data usage
+                            if self.last_consent_line < self.data_usage_line:
+                                self.consent_before_usage = True
+                        
+                elif isinstance(node.func, ast.Attribute):
+                    if any(pattern in node.func.attr.lower() for pattern in consent_patterns):
+                        self.found_consent = True
+                        if hasattr(node, 'lineno'):
+                            self.last_consent_line = node.lineno
+                            if self.last_consent_line < self.data_usage_line:
+                                self.consent_before_usage = True
+                        
+                self.generic_visit(node)
+                
+            def visit_Decorator(self, node):
+                if isinstance(node, ast.Name):
+                    if any(pattern in node.id.lower() for pattern in consent_patterns):
+                        self.found_consent = True
+                        self.consent_before_usage = True
+                self.generic_visit(node)
+                
+            def visit_With(self, node):
+                # Check context managers for consent handling
+                if isinstance(node.items[0].context_expr, ast.Call):
+                    if any(pattern in self.get_call_name(node.items[0].context_expr).lower() 
+                          for pattern in consent_patterns):
+                        self.found_consent = True
+                        self.consent_before_usage = True
+                self.generic_visit(node)
+
+        visitor = ConsentVisitor()
+        visitor.visit(root)
+        
+        # Update compliance status based on proper consent implementation
+        has_valid_consent = visitor.found_consent and visitor.consent_before_usage
+        self.gdpr.compliance_status['has_consent'] = has_valid_consent
+        
+        return has_valid_consent
 
     def get_call_name(self, node: ast.Call) -> str:
         """Extract callable name from Call node"""

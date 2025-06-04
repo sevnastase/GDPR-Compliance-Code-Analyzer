@@ -1,0 +1,2485 @@
+GDPR Compliance Analysis Summary
+==============================
+
+
+File: github-test1.py
+---------------------
+
+GDPR Violations Found:
+     Line 6: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 6: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 21: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 21: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 33: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 33: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 39: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 39: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 40: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 40: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 43: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 43: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure1.py
+------------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure10.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure11.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure12.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure13.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure14.py
+-------------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure15.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure16.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure17.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure18.py
+-------------------
+
+GDPR Violations Found:
+     Line 3: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 3: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure19.py
+-------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure2.py
+------------------
+
+GDPR Violations Found:
+     Line 3: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 3: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure3.py
+------------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 2: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure4.py
+------------------
+
+GDPR Violations Found:
+     Line 3: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 3: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 3: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure5.py
+------------------
+
+GDPR Violations Found:
+     Line 3: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 3: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure6.py
+------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure7.py
+------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure8.py
+------------------
+
+GDPR Violations Found:
+     Line 13: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 13: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 14: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 14: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 30: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 30: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 33: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 33: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 34: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 34: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 41: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 41: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 18: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 18: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 18: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 45: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 45: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: insecure9.py
+------------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_failed1.py
+-----------------------
+Error: invalid syntax (<unknown>, line 3)
+
+File: online_failed2.py
+-----------------------
+
+GDPR Violations Found:
+     Line 65: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 65: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 68: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 68: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 69: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 67: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 67: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_failed3.py
+-----------------------
+
+GDPR Violations Found:
+     Line 23: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 27: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 38: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 38: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 40: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 45: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 45: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 47: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 17: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 17: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 18: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 18: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 19: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 19: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 23: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 23: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 27: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 27: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 30: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 30: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 33: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 33: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 34: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 34: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_failed4.py
+-----------------------
+
+GDPR Violations Found:
+     Line 19: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 19: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 13: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 13: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 13: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 13: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 29: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 29: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 29: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_failed5.py
+-----------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure1.py
+-------------------------
+
+GDPR Violations Found:
+     Line 5: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 5: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure10.py
+--------------------------
+
+GDPR Violations Found:
+     Line 110: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 110: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 111: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 140: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 140: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 149: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 149: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 150: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 150: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 22: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 23: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 23: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 23: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 78: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure11.py
+--------------------------
+
+GDPR Violations Found:
+     Line 44: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 44: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 22: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 22: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 24: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 24: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 24: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 70: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 70: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 72: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 72: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 72: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 108: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 108: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 34: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 34: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 53: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 53: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 78: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 78: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 86: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 86: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 118: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 118: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 120: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 120: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 90: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 90: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure12.py
+--------------------------
+
+GDPR Violations Found:
+     Line 14: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 14: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 25: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 25: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 38: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 38: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 34: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 34: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 30: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 30: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure13.py
+--------------------------
+
+GDPR Violations Found:
+     Line 158: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 159: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 47: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 47: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 53: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 53: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 58: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 66: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 72: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 76: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 94: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 94: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 104: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 107: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 122: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 122: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 147: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 147: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 151: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 151: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 80: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 84: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 132: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 135: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 122: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 122: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 126: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 126: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 132: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 132: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 135: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 135: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 138: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 138: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 141: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 141: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 144: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 144: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure14.py
+--------------------------
+
+GDPR Violations Found:
+     Line 21: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 21: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 17: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 17: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 17: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 28: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 28: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure15.py
+--------------------------
+
+GDPR Violations Found:
+     Line 34: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 34: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 27: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 15: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 15: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 16: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 16: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure16.py
+--------------------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure17.py
+--------------------------
+
+GDPR Violations Found:
+     Line 7: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 24: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 24: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure18.py
+--------------------------
+
+GDPR Violations Found:
+     Line 56: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 19: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 19: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 26: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 26: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 43: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 43: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 63: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 63: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 64: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 64: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 66: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 66: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 29: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 45: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 59: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 50: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 50: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 100: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 49: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 49: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 100: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 100: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 111: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 111: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 110: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 110: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 100: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 100: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure19.py
+--------------------------
+
+GDPR Violations Found:
+     Line 5: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 5: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 16: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 16: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 17: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 17: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 18: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 18: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 19: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 19: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure2.py
+-------------------------
+
+GDPR Violations Found:
+     Line 23: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 23: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 160: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 160: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 176: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 176: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 203: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 203: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 233: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 233: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 293: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 293: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 323: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 323: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 349: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 349: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 355: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 355: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 383: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 383: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 388: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 388: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 396: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 396: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 497: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 497: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 512: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 512: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 533: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 533: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 547: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 547: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 568: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 568: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 583: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 583: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 605: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 605: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 619: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 619: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 632: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 632: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 646: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 646: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 654: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 655: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 655: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 655: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 656: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 657: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 658: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 678: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 678: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 684: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 685: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 685: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 685: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 686: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 687: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 688: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 689: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 690: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 710: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 710: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 713: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 713: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 716: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 716: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 716: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 717: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 717: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 717: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 718: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 718: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 718: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 730: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 730: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 740: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 740: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 745: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 745: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 750: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 750: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 755: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 755: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 408: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 408: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 425: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 425: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 431: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 431: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 434: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 434: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 473: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 473: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 474: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 474: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 475: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 475: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 477: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 477: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 482: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 482: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 485: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 485: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 39: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 39: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 45: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 45: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 451: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 451: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 452: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 452: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 665: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 697: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 725: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure20.py
+--------------------------
+
+GDPR Violations Found:
+     Line 19: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 19: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 13: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 13: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 13: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 13: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 29: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 29: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 29: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure3.py
+-------------------------
+
+GDPR Violations Found:
+     Line 11: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 11: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 17: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 17: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 19: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 19: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 22: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 22: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 45: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 45: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 48: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 48: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 49: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 49: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 50: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 50: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 24: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 24: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 29: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 29: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 31: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 31: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 31: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 33: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 33: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 35: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 35: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure4.py
+-------------------------
+
+GDPR Violations Found:
+     Line 194: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 194: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 194: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 515: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 569: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 569: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 569: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 579: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 579: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 589: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 589: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 589: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 632: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 632: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 642: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 642: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 653: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 653: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 656: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 656: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 666: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 696: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 696: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 718: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 718: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 721: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 721: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 735: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 735: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 747: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 747: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 669: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 669: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 672: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 672: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 672: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 685: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 685: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 685: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 705: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 705: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 707: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 707: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 782: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 782: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 815: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure5.py
+-------------------------
+
+GDPR Violations Found:
+     Line 80: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 80: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 123: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 123: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 124: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 124: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 125: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 125: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 130: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 130: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 247: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 247: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 159: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 159: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 191: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 191: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 252: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 252: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 324: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 324: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 355: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 355: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 374: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 374: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 165: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 165: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 258: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 258: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 330: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 330: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 214: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 214: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 367: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 367: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure6.py
+-------------------------
+
+GDPR Violations Found:
+     Line 26: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 26: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 46: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 46: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 63: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 63: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure7.py
+-------------------------
+
+GDPR Violations Found:
+     Line 178: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 178: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 179: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 179: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 180: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 180: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 209: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 209: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 331: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 331: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 333: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 333: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 346: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 346: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 348: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 348: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 361: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 361: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 363: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 363: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 36: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 36: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 53: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 53: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 80: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 80: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 134: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 134: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 157: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 157: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 182: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 212: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 232: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 232: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 262: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 262: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 277: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 277: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 315: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 41: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 58: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 65: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 85: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 94: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 237: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 248: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 70: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 70: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 75: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 75: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 196: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 196: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 205: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 205: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 212: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 212: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 300: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 300: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 304: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 304: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 315: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 315: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 65: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 65: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 94: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 94: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 139: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 139: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 142: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 142: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 162: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 162: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 267: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 267: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 270: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 270: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 291: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 291: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 144: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 144: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure8.py
+-------------------------
+
+GDPR Violations Found:
+     Line 18: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 18: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 25: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 25: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 25: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 26: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+     Line 28: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 28: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 9: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 9: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 25: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 25: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: online_insecure9.py
+-------------------------
+
+GDPR Violations Found:
+     Line 16: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 16: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 17: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 17: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 28: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 28: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure.py
+---------------
+
+GDPR Violations Found:
+     Line 4: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 4: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure10.py
+-----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure2.py
+----------------
+
+GDPR Violations Found:
+     Line 6: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 6: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure3.py
+----------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 4: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 4: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure4.py
+----------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure5.py
+----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure6.py
+----------------
+
+GDPR Violations Found:
+     Line 4: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 4: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure7.py
+----------------
+
+GDPR Violations Found:
+     Line 2: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 2: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+     Line 5: missing_consent
+     Details: Data processing without explicit consent
+     Severity: high
+     Line 5: missing_retention
+     Details: No data retention policy defined
+     Severity: medium
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure8.py
+----------------
+
+GDPR Violations Found:
+     Line 2: unencrypted_storage
+     Details: Storing sensitive data without encryption
+     Severity: high
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------
+
+File: secure9.py
+----------------
+
+ No GDPR violations detected
+
+Compliance Status:
+  Not Compliant for Has Consent
+  Not Compliant for Has Encryption
+  Not Compliant for Has Retention
+  Looks Good for Has Minimization
+
+--------------------------------------------------

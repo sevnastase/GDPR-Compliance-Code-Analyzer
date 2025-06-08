@@ -21,7 +21,7 @@ LOCAL_STORAGE_PATTERN = re.compile(
 )
 
 # Sensitive data variable names
-SENSITIVE_VARS = {"email", "ssn", "dob", "password"}
+SENSITIVE_VARS = {"email", "ssn", "dob", "password", "name", "token"}
 
 
 def analyze_file(filepath):
